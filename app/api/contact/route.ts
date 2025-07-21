@@ -15,7 +15,7 @@ const contactFormSchema = z.object({
   urgency: z.enum(['normal', 'urgent', 'emergency']).default('normal'),
   preferredContact: z.enum(['email', 'phone']).default('email'),
   location: z.string().optional(),
-  recaptchaToken: z.string(),
+  recaptchaToken: z.string().optional(), // Made optional to handle missing reCAPTCHA
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -45,13 +45,18 @@ export async function POST(request: NextRequest) {
     // Validate form data
     const validatedData = contactFormSchema.parse(body);
     
-    // Verify reCAPTCHA
-    const isRecaptchaValid = await verifyRecaptcha(validatedData.recaptchaToken);
-    if (!isRecaptchaValid) {
-      return NextResponse.json({
-        success: false,
-        message: 'reCAPTCHA verification failed. Please try again.',
-      }, { status: 400 });
+    // Verify reCAPTCHA only if token is provided and secret key is configured
+    if (process.env.RECAPTCHA_SECRET_KEY && validatedData.recaptchaToken && validatedData.recaptchaToken !== 'no-recaptcha') {
+      const isRecaptchaValid = await verifyRecaptcha(validatedData.recaptchaToken);
+      if (!isRecaptchaValid) {
+        return NextResponse.json({
+          success: false,
+          message: 'reCAPTCHA verification failed. Please try again.',
+        }, { status: 400 });
+      }
+    } else if (!process.env.RECAPTCHA_SECRET_KEY) {
+      // Log warning in development if reCAPTCHA is not configured
+      console.warn('Warning: RECAPTCHA_SECRET_KEY not configured. Form submissions are not protected by reCAPTCHA.');
     }
     
     // Format email content (without recaptchaToken)

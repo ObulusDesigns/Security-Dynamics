@@ -57,7 +57,8 @@ export function ContactForm({
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    if (!recaptchaValue) {
+    // Only require reCAPTCHA if site key is available
+    if (FORMS.recaptchaSiteKey && !recaptchaValue) {
       setSubmitStatus('error');
       setErrorMessage('Please complete the reCAPTCHA verification.');
       return;
@@ -75,7 +76,7 @@ export function ContactForm({
         },
         body: JSON.stringify({
           ...data,
-          recaptchaToken: recaptchaValue
+          recaptchaToken: recaptchaValue || 'no-recaptcha'
         }),
       });
 
@@ -213,16 +214,24 @@ export function ContactForm({
         />
       </FormGroup>
 
-      {/* Google reCAPTCHA */}
-      <div className="flex justify-center">
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey={FORMS.recaptchaSiteKey}
-          onChange={(value) => setRecaptchaValue(value)}
-          onExpired={() => setRecaptchaValue(null)}
-          theme="light"
-        />
-      </div>
+      {/* Google reCAPTCHA - Only show if site key is available */}
+      {FORMS.recaptchaSiteKey ? (
+        <div className="flex justify-center">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={FORMS.recaptchaSiteKey}
+            onChange={(value) => setRecaptchaValue(value)}
+            onExpired={() => setRecaptchaValue(null)}
+            theme="light"
+          />
+        </div>
+      ) : (
+        process.env.NODE_ENV === 'development' && (
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-sm text-yellow-800">
+            <strong>Development Notice:</strong> reCAPTCHA is disabled. Set NEXT_PUBLIC_RECAPTCHA_SITE_KEY in environment variables.
+          </div>
+        )
+      )}
 
       {submitStatus === 'success' && (
         <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-start">
