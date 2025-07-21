@@ -15,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://securitydynamicsinc.com'),
   title: SITE_CONFIG.defaultTitle,
   description: SITE_CONFIG.defaultDescription,
   keywords: SITE_CONFIG.defaultKeywords,
