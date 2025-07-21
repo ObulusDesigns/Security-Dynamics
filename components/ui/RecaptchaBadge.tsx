@@ -1,8 +1,14 @@
 'use client';
 
 import React from 'react';
+import { FORMS } from '@/lib/utils/constants';
 
 export function RecaptchaBadge() {
+  // Only show badge if reCAPTCHA is configured
+  if (!FORMS.recaptchaSiteKey) {
+    return null;
+  }
+
   return (
     <div className="fixed bottom-4 left-4 z-40 hidden lg:flex items-center space-x-2 text-xs text-gray-500">
       <div className="bg-white rounded-lg shadow-md p-2 flex items-center space-x-2">
