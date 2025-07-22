@@ -94,7 +94,7 @@ export default function PayServiceBillPage() {
             {/* CTA */}
             <div className="text-center">
               <a
-                href="https://alarmbiller.com/pay"
+                href="https://securitydynamics.alarmbiller.com/Dealer/DealerAccount/Login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center btn-primary text-lg px-10 py-4"
