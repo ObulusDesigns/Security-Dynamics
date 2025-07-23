@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -45,7 +45,7 @@ export function ContactForm({
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const recaptchaRef = useRef<any>(null);
+  const [recaptchaKey, setRecaptchaKey] = useState(0); // For resetting reCAPTCHA
 
   const {
     register,
@@ -92,7 +92,7 @@ export function ContactForm({
         setSubmitStatus('success');
         reset();
         setRecaptchaValue(null);
-        recaptchaRef.current?.reset();
+        setRecaptchaKey(prev => prev + 1); // Reset reCAPTCHA
         
         // Reset success message after 5 seconds
         setTimeout(() => {
@@ -101,12 +101,12 @@ export function ContactForm({
       } else {
         setSubmitStatus('error');
         setErrorMessage(result.message || 'Something went wrong. Please try again.');
-        recaptchaRef.current?.reset();
+        setRecaptchaKey(prev => prev + 1); // Reset reCAPTCHA
       }
     } catch {
       setSubmitStatus('error');
       setErrorMessage('Unable to send message. Please try again or call us directly.');
-      recaptchaRef.current?.reset();
+      setRecaptchaKey(prev => prev + 1); // Reset reCAPTCHA
     } finally {
       setIsSubmitting(false);
     }
@@ -224,7 +224,7 @@ export function ContactForm({
       {FORMS.recaptchaSiteKey ? (
         <div className="flex justify-center">
           <ReCAPTCHA
-            ref={recaptchaRef}
+            key={recaptchaKey}
             sitekey={FORMS.recaptchaSiteKey}
             onChange={(value) => setRecaptchaValue(value)}
             onExpired={() => setRecaptchaValue(null)}
