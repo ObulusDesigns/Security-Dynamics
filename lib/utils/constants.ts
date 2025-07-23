@@ -55,7 +55,7 @@ export const SITE_CONFIG = {
 };
 
 export const TRACKING = {
-  googleAnalytics: process.env.NEXT_PUBLIC_GA_ID || 'G-CHTXZ5W0S3',
+  googleAnalytics: process.env.NEXT_PUBLIC_GA_ID || '',
   googleTagManager: process.env.NEXT_PUBLIC_GTM_ID || '',
   facebookPixel: process.env.NEXT_PUBLIC_FB_PIXEL || ''
 };
