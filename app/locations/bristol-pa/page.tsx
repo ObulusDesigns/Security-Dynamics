@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Bristol PA',
-      },
+        alt: 'Security Systems in Bristol PA'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: bristol.seoData.primaryKeyword,
-    description: 'Trusted security provider for Bristol industrial facilities and businesses.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/bristol-pa`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/bristol-pa`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -51,7 +41,6 @@ const localBusinessSchema = {
   image: SITE_CONFIG.ogImage,
   '@sameAs': [
     COMPANY_INFO.socialMedia?.facebook || '',
-    COMPANY_INFO.socialMedia?.twitter || '',
     COMPANY_INFO.socialMedia?.linkedin || ''
   ].filter(Boolean),
   telephone: COMPANY_INFO.phone,
@@ -192,24 +181,21 @@ export default function BristolLocationPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-service-area"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceAreaSchema),
-        }}
+          __html: JSON.stringify(serviceAreaSchema)}}
       />
 
       <CityPageTemplate city={bristol} nearbyLocations={nearbyLocations} />

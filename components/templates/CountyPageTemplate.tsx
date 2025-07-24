@@ -26,7 +26,7 @@ export default function CountyPageTemplate({ county, cities }: CountyPageTemplat
         
         location={county.name}
       primaryCta={{
-          text: "Get Free Security Assessment",
+          text: "Get Security Assessment",
           href: "/contact"
         }}
       />
@@ -166,7 +166,7 @@ export default function CountyPageTemplate({ county, cities }: CountyPageTemplat
       {/* CTA Section */}
       <CTA 
         title={`Ready to Secure Your ${county.name} Business?`}
-        subtitle="Get a free security assessment from our local team"
+        subtitle="Get a security assessment from our local team"
         showFeatures={true}
       />
     </>

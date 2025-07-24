@@ -210,22 +210,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Industries',
-      },
+        alt: 'Security Dynamics Industries'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Industries We Serve | Security Dynamics',
-    description: 'Specialized security solutions for every industry.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/industries`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/industries`}};
 
 // Schema markup
 const breadcrumbSchema = {
@@ -275,16 +265,14 @@ export default function IndustriesPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-organization"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
 
       {/* Hero Section */}

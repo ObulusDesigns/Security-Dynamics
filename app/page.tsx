@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '@/lib/utils/constants';
 
 export const metadata: Metadata = {
   title: 'Security Dynamics Inc. | Commercial Security Systems NJ & PA | 24/7 Monitoring',
-  description: 'Leading provider of commercial security systems in Mercer County NJ & Bucks County PA. Access control, video surveillance, intrusion detection & 24/7 monitoring. Get free assessment!',
+  description: 'Leading provider of commercial security systems in Mercer County NJ & Bucks County PA. Access control, video surveillance, intrusion detection & 24/7 monitoring. Get Security assessment!',
   keywords: 'security systems NJ, security systems PA, commercial security Mercer County, business security Bucks County, access control systems, video surveillance, 24/7 monitoring, security company near me',
   openGraph: {
     title: 'Security Dynamics Inc. | Commercial Security Systems NJ & PA',
@@ -17,22 +17,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Inc. - Advanced Commercial Security Solutions',
-      },
+        alt: 'Security Dynamics Inc. - Advanced Commercial Security Solutions'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Security Dynamics Inc. | Commercial Security Systems',
-    description: 'Leading security provider in NJ & PA. 24/7 monitoring & rapid response.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: SITE_CONFIG.url,
-  },
-};
+    canonical: SITE_CONFIG.url}};
 
 // Schema markup for homepage
 const organizationSchema = {
@@ -142,7 +132,7 @@ export default function HomePage() {
         title="Advanced Security Solutions & for NJ & PA Businesses"
         description="Experience next-generation security technology with local expertise. We're not just installing systems—we're protecting what matters most with cutting-edge solutions and 24/7 monitoring."
         primaryCta={{
-          text: "Get Free Security Assessment",
+          text: "Get Security Assessment",
           href: "/contact"
         }}
         secondaryCta={{
@@ -194,15 +184,13 @@ export default function HomePage() {
         id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
       <Script
         id="local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
     </>
   );

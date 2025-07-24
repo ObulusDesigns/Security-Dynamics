@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Smart Security ${city.name}, ${city.stateCode}`,
-    description: `Advanced security systems in ${city.name}. Smart home integration & AI-powered monitoring. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/west-windsor-nj-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [

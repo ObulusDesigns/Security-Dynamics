@@ -11,7 +11,7 @@ const relatedServices = services.filter(s => s.slug !== 'intrusion-detection');
 // Generate metadata
 export const metadata: Metadata = {
   title: `${intrusionDetectionService.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Advanced intrusion detection systems for NJ & PA businesses. Motion sensors, glass break detectors, perimeter protection & 24/7 monitoring. Get free assessment!',
+  description: 'Advanced intrusion detection systems for NJ & PA businesses. Motion sensors, glass break detectors, perimeter protection & 24/7 monitoring. Get Security assessment!',
   keywords: intrusionDetectionService.seoData.primaryKeyword + ', ' + intrusionDetectionService.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${intrusionDetectionService.seoData.primaryKeyword} | 24/7 Monitoring`,
@@ -23,22 +23,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Intrusion Detection Systems for Business Security',
-      },
+        alt: 'Intrusion Detection Systems for Business Security'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: intrusionDetectionService.seoData.primaryKeyword,
-    description: 'Advanced intrusion detection systems. Smart sensors & 24/7 monitoring.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/services/intrusion-detection`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/services/intrusion-detection`}};
 
 // Schema markup
 const serviceSchema = {
@@ -148,16 +138,13 @@ export default function IntrusionDetectionPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

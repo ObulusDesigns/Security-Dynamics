@@ -30,22 +30,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Hospitality Security Systems',
-      },
+        alt: 'Hospitality Security Systems'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Hospitality Security Systems | Protect Guests & Assets',
-    description: 'Professional security solutions for hotels, restaurants, and entertainment venues.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/industries/hospitality`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/industries/hospitality`}};
 
 // Schema markup
 const serviceSchema = {
@@ -57,11 +47,9 @@ const serviceSchema = {
   provider: {
     '@type': 'SecuritySystemInstallationService',
     name: 'Security Dynamics Inc.',
-    telephone: COMPANY_INFO.phone,
-  },
+    telephone: COMPANY_INFO.phone},
   areaServed: ['New Jersey', 'Pennsylvania'],
-  serviceType: 'Hospitality Security',
-};
+  serviceType: 'Hospitality Security'};
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -132,16 +120,13 @@ export default function HospitalitySecurityPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Hero Section */}
@@ -532,7 +517,7 @@ export default function HospitalitySecurityPage() {
       {/* CTA Section */}
       <CTA
         title="Secure Your Hospitality Business Today"
-        subtitle="Get a free security assessment tailored to your venue"
+        subtitle="Get a professional security assessment tailored to your venue"
         showFeatures={true}
       />
     </>

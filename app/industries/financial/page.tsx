@@ -30,22 +30,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Financial Security Systems',
-      },
+        alt: 'Financial Security Systems'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Bank & Financial Security Systems | Compliance-Ready Solutions',
-    description: 'High-security systems for banks and credit unions. Meet regulatory requirements while protecting assets.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/industries/financial`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/industries/financial`}};
 
 // Schema markup
 const serviceSchema = {
@@ -57,11 +47,9 @@ const serviceSchema = {
   provider: {
     '@type': 'SecuritySystemInstallationService',
     name: 'Security Dynamics Inc.',
-    telephone: COMPANY_INFO.phone,
-  },
+    telephone: COMPANY_INFO.phone},
   areaServed: ['New Jersey', 'Pennsylvania'],
-  serviceType: 'Financial Security',
-};
+  serviceType: 'Financial Security'};
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -132,16 +120,13 @@ export default function FinancialSecurityPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Hero Section */}

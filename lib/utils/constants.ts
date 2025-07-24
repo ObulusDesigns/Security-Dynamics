@@ -27,7 +27,7 @@ export const COMPANY_INFO = {
   socialMedia: {
     facebook: 'https://www.facebook.com/SecurityDynamicsNJ',
     linkedin: 'https://www.linkedin.com/company/security-dynamics-nj',
-    twitter: 'https://twitter.com/securitydynamics'
+    youtube: 'https://www.youtube.com/channel/SecurityDynamicsNJ'
   },
   certifications: [
     'Fire New Jersey P00747',

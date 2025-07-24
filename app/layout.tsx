@@ -42,21 +42,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Inc. - Advanced Security Solutions',
-      },
+        alt: 'Security Dynamics Inc. - Advanced Security Solutions'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: SITE_CONFIG.defaultTitle,
-    description: SITE_CONFIG.defaultDescription,
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: SITE_CONFIG.url,
-  },
+    canonical: SITE_CONFIG.url},
   robots: {
     index: true,
     follow: true,
@@ -65,14 +56,10 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 export default function RootLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode;
 }) {
   return (
@@ -106,8 +93,7 @@ export default function RootLayout({
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
                   gtag('config', '${TRACKING.googleAnalytics}');
-                `,
-              }}
+                `}}
             />
           </>
         )}

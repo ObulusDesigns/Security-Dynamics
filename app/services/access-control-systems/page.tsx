@@ -11,7 +11,7 @@ const relatedServices = services.filter(s => s.slug !== 'access-control-systems'
 // Generate metadata
 export const metadata: Metadata = {
   title: `${accessControlService.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Advanced access control systems for NJ & PA businesses. Biometric scanners, key cards, mobile credentials & cloud management. Get free consultation!',
+  description: 'Advanced access control systems for NJ & PA businesses. Biometric scanners, key cards, mobile credentials & cloud management. Get Professional consultation!',
   keywords: accessControlService.seoData.primaryKeyword + ', ' + accessControlService.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${accessControlService.seoData.primaryKeyword} | 24/7 Support`,
@@ -23,22 +23,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Access Control Systems for Business Security',
-      },
+        alt: 'Access Control Systems for Business Security'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: accessControlService.seoData.primaryKeyword,
-    description: 'Advanced access control systems for businesses. Biometric, keycard & mobile solutions.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/services/access-control-systems`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/services/access-control-systems`}};
 
 // Schema markup
 const serviceSchema = {
@@ -148,16 +138,13 @@ export default function AccessControlSystemsPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

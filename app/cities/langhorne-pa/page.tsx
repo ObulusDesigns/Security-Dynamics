@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Business Security ${city.name}, ${city.stateCode}`,
-    description: `Medical & business security in ${city.name}. Professional protection solutions. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/langhorne-pa-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [

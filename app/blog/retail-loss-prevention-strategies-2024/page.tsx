@@ -40,15 +40,8 @@ export const metadata: Metadata = {
     modifiedTime: post.lastUpdated,
     authors: [post.author]
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: post.title,
-    description: post.excerpt,
-    images: [post.featuredImage],
-  },
   alternates: {
-    canonical: `https://securitydynamicsnj.com/learning-center/blog/${postSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/learning-center/blog/${postSlug}`}
 };
 
 export default function RetailLossPreventionPage() {
@@ -545,7 +538,7 @@ export default function RetailLossPreventionPage() {
           for employees and customers.
         </p>
         <p className="font-semibold">
-          Contact our retail security specialists for a free shrinkage assessment and 
+          Contact our retail security specialists for a professional shrinkage assessment and 
           customized loss prevention strategy. Stop theft before it happens.
         </p>
       </div>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords: ewing.seoData.primaryKeyword + ', ' + ewing.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${ewing.seoData.primaryKeyword} | Business & Home Security`,
-    description: 'Protect your Ewing Township property with professional security systems. Expert installation near TCNJ, West Trenton areas. Free security assessment!',
+    description: 'Protect your Ewing Township property with professional security systems. Expert installation near TCNJ, West Trenton areas. Professional security assessment!',
     url: `${SITE_CONFIG.url}/locations/ewing-nj`,
     siteName: 'Security Dynamics Inc.',
     images: [
@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Ewing NJ',
-      },
+        alt: 'Security Systems in Ewing NJ'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: ewing.seoData.primaryKeyword,
-    description: 'Trusted security provider for Ewing Township businesses, schools & residential properties.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/ewing-nj`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/ewing-nj`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -51,7 +41,6 @@ const localBusinessSchema = {
   image: SITE_CONFIG.ogImage,
   '@sameAs': [
     COMPANY_INFO.socialMedia?.facebook || '',
-    COMPANY_INFO.socialMedia?.twitter || '',
     COMPANY_INFO.socialMedia?.linkedin || ''
   ].filter(Boolean),
   telephone: COMPANY_INFO.phone,
@@ -188,24 +177,21 @@ export default function EwingLocationPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-service-area"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceAreaSchema),
-        }}
+          __html: JSON.stringify(serviceAreaSchema)}}
       />
 
       <CityPageTemplate city={ewing} nearbyLocations={nearbyLocations} />

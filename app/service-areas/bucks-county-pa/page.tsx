@@ -19,22 +19,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Bucks County PA',
-      },
+        alt: 'Security Systems in Bucks County PA'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `${bucksCounty.seoData.primaryKeyword}`,
-    description: 'Leading security provider in Bucks County PA. 24/7 monitoring & rapid response.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/service-areas/bucks-county-pa`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/service-areas/bucks-county-pa`}};
 
 // Schema markup for Bucks County
 const localBusinessSchema = {
@@ -145,16 +135,13 @@ export default function BucksCountyPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

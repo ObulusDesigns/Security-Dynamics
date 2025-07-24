@@ -55,7 +55,7 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="primary" href="#quote">
-                Get Free Quote
+                Get Custom Quote
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-slate-900" href={`tel:${COMPANY_INFO.phone}`}>
@@ -319,7 +319,7 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Get Your Free {service.name} Quote Today
+              Get Your {service.name} Quote Today
             </h2>
             <p className="text-xl mb-8 text-gray-600">
               Protect your {location.name} property with professional security solutions

@@ -41,15 +41,8 @@ export const metadata: Metadata = {
     modifiedTime: guide.lastUpdated,
     authors: [guide.author]
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: guide.title,
-    description: guide.description,
-    images: [guide.featuredImage],
-  },
   alternates: {
-    canonical: `https://securitydynamicsnj.com/learning-center/guides/${guideSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/learning-center/guides/${guideSlug}`}
 };
 
 const breadcrumbSchema = {

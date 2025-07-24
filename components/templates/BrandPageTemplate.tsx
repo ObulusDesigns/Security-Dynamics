@@ -56,7 +56,7 @@ export default function BrandPageTemplate({ brand }: BrandPageProps) {
         description={brand.tagline}
         showEmergencyBadge={false}
         primaryCta={{
-          text: "Get Free Consultation",
+          text: "Get Professional Consultation",
           href: "/contact"
         }}
       />
@@ -288,7 +288,7 @@ export default function BrandPageTemplate({ brand }: BrandPageProps) {
             {[
               {
                 step: '1',
-                title: 'Free Assessment',
+                title: 'Security Assessment',
                 description: 'On-site evaluation of your security needs',
                 icon: ChartBarIcon
               },
@@ -416,7 +416,7 @@ export default function BrandPageTemplate({ brand }: BrandPageProps) {
       {/* CTA Section */}
       <CTA 
         title={`Ready to Secure Your Property with ${brand.name}?`}
-        subtitle="Get a free consultation from our certified technicians"
+        subtitle="Get a Professional consultation from our certified technicians"
         showFeatures={true}
       />
     </>

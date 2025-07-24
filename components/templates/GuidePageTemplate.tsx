@@ -47,7 +47,7 @@ export function GuidePageTemplate({
         
         
       primaryCta={{
-          text: "Get Free Consultation",
+          text: "Get Professional Consultation",
           href: "/contact"
         }}
       />

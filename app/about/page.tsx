@@ -29,22 +29,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Inc. - About Us',
-      },
+        alt: 'Security Dynamics Inc. - About Us'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'About Security Dynamics Inc. | 35+ Years of Excellence',
-    description: 'Family-owned security company serving NJ & PA businesses with cutting-edge technology and personalized service.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/about`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/about`}};
 
 // Schema markup
 const organizationSchema = {
@@ -131,16 +121,14 @@ export default function AboutPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}
@@ -149,7 +137,7 @@ export default function AboutPage() {
         subtitle="Your Trusted Security Partner Since 1987"
         description="Family-owned and operated, we've been protecting businesses across New Jersey and Pennsylvania for over 35 years with cutting-edge technology and personalized service."
         primaryCta={{
-          text: "Get Free Assessment",
+          text: "Get Security Assessment",
           href: "/contact"
         }}
       />
@@ -581,7 +569,7 @@ export default function AboutPage() {
               href="/contact"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
-              Get Free Security Assessment
+              Get Security Assessment
             </Link>
             <a
               href={`tel:${COMPANY_INFO.phone}`}

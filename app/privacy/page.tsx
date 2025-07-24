@@ -27,26 +27,15 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Privacy Policy',
-      },
+        alt: 'Security Dynamics Privacy Policy'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Privacy Policy | Security Dynamics',
-    description: 'How we protect your personal information and privacy.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/privacy`,
-  },
+    canonical: `${SITE_CONFIG.url}/privacy`},
   robots: {
     index: true,
-    follow: true,
-  },
-};
+    follow: true}};
 
 // Schema markup
 const breadcrumbSchema = {
@@ -186,8 +175,7 @@ export default function PrivacyPolicyPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}

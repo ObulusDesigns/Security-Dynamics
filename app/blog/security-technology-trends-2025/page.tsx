@@ -31,24 +31,14 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Technology Trends 2025',
-      },
+        alt: 'Security Technology Trends 2025'},
     ],
     locale: 'en_US',
     type: 'article',
     publishedTime: '2025-01-05T00:00:00.000Z',
-    authors: ['Security Dynamics Inc.'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Top Security Technology Trends for 2025',
-    description: 'AI analytics, cloud integration, biometrics - discover what\'s next in business security.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    authors: ['Security Dynamics Inc.']},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/blog/security-technology-trends-2025`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/blog/security-technology-trends-2025`}};
 
 // Schema markup
 const articleSchema = {
@@ -181,16 +171,14 @@ export default function SecurityTechnologyTrends2025Page() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
+          __html: JSON.stringify(articleSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}
@@ -352,7 +340,7 @@ export default function SecurityTechnologyTrends2025Page() {
               Ready to Modernize Your Security?
             </h3>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Get a free consultation to discover which technologies will have the biggest impact 
+              Get a Professional consultation to discover which technologies will have the biggest impact 
               on your security and bottom line.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

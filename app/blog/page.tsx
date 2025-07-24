@@ -29,22 +29,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Blog',
-      },
+        alt: 'Security Dynamics Blog'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Security Blog | Business Security Tips & News',
-    description: 'Expert security insights and tips for NJ & PA businesses.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/blog`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/blog`}};
 
 // Blog posts data - Now includes all 7 posts
 const blogPosts = [
@@ -212,16 +202,14 @@ export default function BlogPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(blogListingSchema),
-        }}
+          __html: JSON.stringify(blogListingSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}
@@ -462,7 +450,7 @@ export default function BlogPage() {
             Ready to Secure Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Turn your knowledge into action. Get a free security assessment from our experts and discover 
+            Turn your knowledge into action. Get a professional security assessment from our experts and discover 
             the perfect solution for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -470,7 +458,7 @@ export default function BlogPage() {
               href="/contact"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
             >
-              Get Free Assessment
+              Get Security Assessment
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
             <a

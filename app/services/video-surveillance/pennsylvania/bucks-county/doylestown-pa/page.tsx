@@ -39,17 +39,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Historic Property CCTV ${location.name}`,
-    description: `Discrete surveillance for Doylestown's historic buildings. Professional installation. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/video-surveillance-doylestown.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`}
 };
 
 const nearbyAreas: ServiceArea[] = [

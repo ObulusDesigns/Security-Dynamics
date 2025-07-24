@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Industrial Security ${city.name}, ${city.stateCode}`,
-    description: `Industrial & commercial security in ${city.name}. Protect your facility 24/7. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/bristol-pa-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [

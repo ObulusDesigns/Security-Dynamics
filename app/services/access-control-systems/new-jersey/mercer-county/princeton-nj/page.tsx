@@ -39,17 +39,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Access Control ${location.name} | Smart Security`,
-    description: `Advanced access control for Princeton. Biometric & mobile solutions. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/access-control-princeton.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`}
 };
 
 const nearbyAreas: ServiceArea[] = [

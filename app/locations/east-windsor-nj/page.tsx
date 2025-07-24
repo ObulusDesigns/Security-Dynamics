@@ -13,7 +13,7 @@ const nearbyLocations = allLocations.filter(loc =>
 // Generate metadata
 export const metadata: Metadata = {
   title: `${eastWindsor.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Expert security systems for East Windsor NJ businesses & homes. Twin Rivers, Hightstown area coverage. Commercial & residential security. Free consultation!',
+  description: 'Expert security systems for East Windsor NJ businesses & homes. Twin Rivers, Hightstown area coverage. Commercial & residential security. Professional consultation!',
   keywords: eastWindsor.seoData.primaryKeyword + ', ' + eastWindsor.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${eastWindsor.seoData.primaryKeyword} | Commercial & Residential Security`,
@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in East Windsor NJ',
-      },
+        alt: 'Security Systems in East Windsor NJ'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: eastWindsor.seoData.primaryKeyword,
-    description: 'Leading security provider for East Windsor businesses and Twin Rivers community.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/east-windsor-nj`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/east-windsor-nj`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -51,7 +41,6 @@ const localBusinessSchema = {
   image: SITE_CONFIG.ogImage,
   '@sameAs': [
     COMPANY_INFO.socialMedia?.facebook || '',
-    COMPANY_INFO.socialMedia?.twitter || '',
     COMPANY_INFO.socialMedia?.linkedin || ''
   ].filter(Boolean),
   telephone: COMPANY_INFO.phone,
@@ -192,24 +181,21 @@ export default function EastWindsorLocationPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-service-area"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceAreaSchema),
-        }}
+          __html: JSON.stringify(serviceAreaSchema)}}
       />
 
       <CityPageTemplate city={eastWindsor} nearbyLocations={nearbyLocations} />

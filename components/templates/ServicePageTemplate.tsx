@@ -32,7 +32,7 @@ export default function ServicePageTemplate({ service, relatedServices = [] }: S
         
         
       primaryCta={{
-          text: "Get Free Consultation",
+          text: "Get Professional Consultation",
           href: "/contact"
         }}
       />
@@ -290,7 +290,7 @@ export default function ServicePageTemplate({ service, relatedServices = [] }: S
             {[
               {
                 step: '1',
-                title: 'Free Assessment',
+                title: 'Security Assessment',
                 description: 'On-site evaluation of your security needs',
                 icon: ChartBarIcon
               },
@@ -461,7 +461,7 @@ export default function ServicePageTemplate({ service, relatedServices = [] }: S
               },
               {
                 question: `How much does ${service.name.toLowerCase()} cost?`,
-                answer: 'Costs vary based on your specific needs and the size of your facility. We offer free on-site assessments and provide detailed, transparent quotes with no hidden fees. Contact us for a customized proposal.'
+                answer: 'Costs vary based on your specific needs and the size of your facility. We offer on-site assessments and provide detailed, transparent quotes with no hidden fees. Contact us for a customized proposal.'
               }
             ]}
             variant="dark"
@@ -472,7 +472,7 @@ export default function ServicePageTemplate({ service, relatedServices = [] }: S
       {/* CTA Section */}
       <CTA 
         title={`Ready to Upgrade Your Security with ${service.name}?`}
-        subtitle="Get a free consultation and custom quote"
+        subtitle="Get a Professional consultation and custom quote"
         showFeatures={true}
       />
     </>

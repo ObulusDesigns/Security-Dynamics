@@ -30,22 +30,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Healthcare Security Systems',
-      },
+        alt: 'Healthcare Security Systems'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Healthcare Security Systems | Medical Facility Protection',
-    description: 'HIPAA-compliant security solutions for healthcare facilities. Expert installation & monitoring.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/industries/healthcare`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/industries/healthcare`}};
 
 // Schema markup
 const serviceSchema = {
@@ -57,11 +47,9 @@ const serviceSchema = {
   provider: {
     '@type': 'SecuritySystemInstallationService',
     name: 'Security Dynamics Inc.',
-    telephone: COMPANY_INFO.phone,
-  },
+    telephone: COMPANY_INFO.phone},
   areaServed: ['New Jersey', 'Pennsylvania'],
-  serviceType: 'Healthcare Security',
-};
+  serviceType: 'Healthcare Security'};
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -121,7 +109,7 @@ const faqSchema = {
       name: 'How much do healthcare security systems cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Healthcare security system costs vary based on facility size and requirements. Basic systems for medical offices start around $5,000, while comprehensive hospital systems can range from $50,000 to $500,000+. We provide free assessments and custom quotes.'
+        text: 'Healthcare security system costs vary based on facility size and requirements. Basic systems for medical offices start around $5,000, while comprehensive hospital systems can range from $50,000 to $500,000+. We provide Security assessments and custom quotes.'
       }
     }
   ]
@@ -132,16 +120,13 @@ export default function HealthcareSecurityPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Hero Section */}
@@ -393,7 +378,7 @@ export default function HealthcareSecurityPage() {
               },
               {
                 question: 'How much do healthcare security systems cost?',
-                answer: 'Healthcare security system costs vary based on facility size and requirements. Basic systems for medical offices start around $5,000, while comprehensive hospital systems can range from $50,000 to $500,000+. We provide free assessments and custom quotes.'
+                answer: 'Healthcare security system costs vary based on facility size and requirements. Basic systems for medical offices start around $5,000, while comprehensive hospital systems can range from $50,000 to $500,000+. We provide Security assessments and custom quotes.'
               },
               {
                 question: 'Can security systems integrate with existing healthcare technology?',
@@ -469,7 +454,7 @@ export default function HealthcareSecurityPage() {
       {/* CTA Section */}
       <CTA
         title="Secure Your Healthcare Facility Today"
-        subtitle="Get a free security assessment and HIPAA compliance review"
+        subtitle="Get a professional security assessment and HIPAA compliance review"
         showFeatures={true}
       />
     </>

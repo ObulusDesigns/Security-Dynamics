@@ -13,7 +13,7 @@ const nearbyLocations = allLocations.filter(loc =>
 // Generate metadata
 export const metadata: Metadata = {
   title: `${levittown.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Professional security systems for Levittown PA homes & businesses. Fairless Hills area coverage. Alarm monitoring, video surveillance. Free quote!',
+  description: 'Professional security systems for Levittown PA homes & businesses. Fairless Hills area coverage. Alarm monitoring, video surveillance. Custom quote!',
   keywords: levittown.seoData.primaryKeyword + ', ' + levittown.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${levittown.seoData.primaryKeyword} | Home & Business Security`,
@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Levittown PA',
-      },
+        alt: 'Security Systems in Levittown PA'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: levittown.seoData.primaryKeyword,
-    description: 'Trusted security provider for Levittown homes and small businesses since 1985.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/levittown-pa`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/levittown-pa`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -51,7 +41,6 @@ const localBusinessSchema = {
   image: SITE_CONFIG.ogImage,
   '@sameAs': [
     COMPANY_INFO.socialMedia?.facebook || '',
-    COMPANY_INFO.socialMedia?.twitter || '',
     COMPANY_INFO.socialMedia?.linkedin || ''
   ].filter(Boolean),
   telephone: COMPANY_INFO.phone,
@@ -188,24 +177,21 @@ export default function LevittownLocationPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-service-area"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceAreaSchema),
-        }}
+          __html: JSON.stringify(serviceAreaSchema)}}
       />
 
       <CityPageTemplate city={levittown} nearbyLocations={nearbyLocations} />

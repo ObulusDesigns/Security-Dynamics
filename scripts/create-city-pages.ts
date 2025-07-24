@@ -15,7 +15,7 @@ const nearbyLocations = allLocations.filter(loc =>
 // Generate metadata
 export const metadata: Metadata = {
   title: \`\${city.seo.primaryKeyword} | Security Dynamics Inc.\`,
-  description: city.seo.secondaryKeywords[0] + '. ' + city.seo.localModifiers[0] + '. Get free assessment!',
+  description: city.seo.secondaryKeywords[0] + '. ' + city.seo.localModifiers[0] + '. Get Security assessment!',
   keywords: city.seo.primaryKeyword + ', ' + city.seo.secondaryKeywords.join(', '),
   openGraph: {
     title: \`\${city.seo.primaryKeyword} | 24/7 Protection\`,
@@ -27,22 +27,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in ${cityName} ${stateAbbr}',
-      },
+        alt: 'Security Systems in ${cityName} ${stateAbbr}'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: city.seo.primaryKeyword,
-    description: 'Leading security provider in ${cityName} ${stateAbbr}. 24/7 monitoring & rapid response.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: \`\${SITE_CONFIG.url}/locations/${citySlug}\`,
-  },
-};
+    canonical: \`\${SITE_CONFIG.url}/locations/${citySlug}\`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -133,20 +123,17 @@ export default function ${cityName.replace(/\s+/g, '')}${stateAbbr}Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

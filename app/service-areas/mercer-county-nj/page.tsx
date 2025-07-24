@@ -19,22 +19,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Mercer County NJ',
-      },
+        alt: 'Security Systems in Mercer County NJ'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `${mercerCounty.seoData.primaryKeyword}`,
-    description: 'Leading security provider in Mercer County NJ. 24/7 monitoring & rapid response.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/service-areas/mercer-county-nj`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/service-areas/mercer-county-nj`}};
 
 // Schema markup for Mercer County
 const localBusinessSchema = {
@@ -145,16 +135,13 @@ export default function MercerCountyPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

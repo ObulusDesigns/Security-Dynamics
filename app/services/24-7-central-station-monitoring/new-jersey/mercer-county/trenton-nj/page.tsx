@@ -41,17 +41,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `24/7 Central Station Monitoring ${location.name} | Security Dynamics`,
-    description: `24/7 monitoring Trenton Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/24-7-central-station-monitoring-trenton-nj.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`}
 };
 
 const nearbyAreas: ServiceArea[] = [

@@ -11,7 +11,7 @@ const relatedServices = services.filter(s => s.slug !== 'video-surveillance');
 // Generate metadata
 export const metadata: Metadata = {
   title: `${videoSurveillanceService.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'HD/4K video surveillance systems for NJ & PA businesses. AI-powered analytics, cloud storage, facial recognition & remote monitoring. Get free consultation!',
+  description: 'HD/4K video surveillance systems for NJ & PA businesses. AI-powered analytics, cloud storage, facial recognition & remote monitoring. Get Professional consultation!',
   keywords: videoSurveillanceService.seoData.primaryKeyword + ', ' + videoSurveillanceService.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${videoSurveillanceService.seoData.primaryKeyword} | AI-Powered Analytics`,
@@ -23,22 +23,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Video Surveillance Systems for Business Security',
-      },
+        alt: 'Video Surveillance Systems for Business Security'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: videoSurveillanceService.seoData.primaryKeyword,
-    description: 'HD/4K video surveillance with AI analytics. Cloud storage & remote monitoring.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/services/video-surveillance`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/services/video-surveillance`}};
 
 // Schema markup
 const serviceSchema = {
@@ -148,16 +138,13 @@ export default function VideoSurveillancePage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

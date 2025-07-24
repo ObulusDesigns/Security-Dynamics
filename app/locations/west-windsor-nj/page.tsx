@@ -13,7 +13,7 @@ const nearbyLocations = allLocations.filter(loc =>
 // Generate metadata
 export const metadata: Metadata = {
   title: `${westWindsor.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Premium security systems for West Windsor NJ businesses & luxury homes. Smart home integration, corporate security, 24/7 monitoring. Get free consultation!',
+  description: 'Premium security systems for West Windsor NJ businesses & luxury homes. Smart home integration, corporate security, 24/7 monitoring. Get Professional consultation!',
   keywords: westWindsor.seoData.primaryKeyword + ', ' + westWindsor.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${westWindsor.seoData.primaryKeyword} | Corporate & Smart Home Security`,
@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in West Windsor NJ',
-      },
+        alt: 'Security Systems in West Windsor NJ'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: westWindsor.seoData.primaryKeyword,
-    description: 'Leading security provider for West Windsor tech companies & luxury homes.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/west-windsor-nj`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/west-windsor-nj`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -51,7 +41,6 @@ const localBusinessSchema = {
   image: SITE_CONFIG.ogImage,
   '@sameAs': [
     COMPANY_INFO.socialMedia?.facebook || '',
-    COMPANY_INFO.socialMedia?.twitter || '',
     COMPANY_INFO.socialMedia?.linkedin || ''
   ].filter(Boolean),
   telephone: COMPANY_INFO.phone,
@@ -184,24 +173,21 @@ export default function WestWindsorLocationPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-service-area"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceAreaSchema),
-        }}
+          __html: JSON.stringify(serviceAreaSchema)}}
       />
 
       <CityPageTemplate city={westWindsor} nearbyLocations={nearbyLocations} />

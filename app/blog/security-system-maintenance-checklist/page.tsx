@@ -15,7 +15,7 @@ import Script from 'next/script';
 // SEO Metadata
 export const metadata: Metadata = {
   title: 'Security System Maintenance Checklist 2025 | Keep Your Business Safe',
-  description: 'Complete security system maintenance checklist for businesses. Monthly, quarterly & annual tasks to ensure reliable protection. Free downloadable guide.',
+  description: 'Complete security system maintenance checklist for businesses. Monthly, quarterly & annual tasks to ensure reliable protection. Downloadable guide included.',
   keywords: 'security system maintenance, security camera maintenance, access control maintenance, alarm system maintenance, security system checklist, preventive maintenance',
   openGraph: {
     title: 'Security System Maintenance Checklist | Essential Guide 2025',
@@ -27,24 +27,14 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security System Maintenance Checklist',
-      },
+        alt: 'Security System Maintenance Checklist'},
     ],
     locale: 'en_US',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
-    authors: ['Security Dynamics Inc.'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Security System Maintenance Checklist 2025',
-    description: 'Essential maintenance tasks to keep your business security systems running perfectly.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    authors: ['Security Dynamics Inc.']},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/blog/security-system-maintenance-checklist`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/blog/security-system-maintenance-checklist`}};
 
 // Schema markup
 const articleSchema = {
@@ -104,12 +94,10 @@ export default function SecurityMaintenanceChecklistPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
+          __html: JSON.stringify(articleSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}
@@ -531,7 +519,7 @@ export default function SecurityMaintenanceChecklistPage() {
             <div className="bg-primary-50 rounded-xl p-8 text-center">
               <ClipboardDocumentCheckIcon className="w-16 h-16 text-primary mx-auto mb-4" />
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Get Your Free Printable Maintenance Checklist
+                Get Your Printable Maintenance Checklist
               </h2>
               <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
                 Download our comprehensive PDF checklist with monthly, quarterly, and annual tasks. 

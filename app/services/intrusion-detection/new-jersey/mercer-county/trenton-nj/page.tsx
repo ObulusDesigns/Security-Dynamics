@@ -39,17 +39,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Business Alarms ${location.name} | 24/7 Protection`,
-    description: `Advanced intrusion detection for Trenton businesses. Rapid response guaranteed. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/intrusion-detection-trenton.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`}
 };
 
 const nearbyAreas: ServiceArea[] = [

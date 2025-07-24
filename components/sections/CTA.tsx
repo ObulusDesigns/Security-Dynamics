@@ -16,7 +16,7 @@ interface CTAProps {
 }
 
 const features = [
-  'Free Security Assessment',
+  'Security Assessment',
   'No Obligation Quote',
   'Same-Day Service Available',
   'Licensed & Insured',
@@ -68,7 +68,7 @@ export function CTA({
               href="/contact"
               className="btn-primary text-lg px-8 py-4 animate-pulse"
             >
-              Get Free Quote
+              Get Custom Quote
               <ArrowRightIcon className="w-4 h-4 ml-2" />
             </Link>
           </div>

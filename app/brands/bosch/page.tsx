@@ -18,22 +18,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Bosch Security Systems - Security Dynamics',
-      },
+        alt: 'Bosch Security Systems - Security Dynamics'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Bosch Security Systems | Enterprise Security NJ & PA',
-    description: 'Professional Bosch installation. Advanced IP cameras, integrated systems. Free consultation.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/brands/bosch`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/brands/bosch`}};
 
 // Schema markup
 const organizationSchema = {
@@ -218,24 +208,21 @@ export default function BoschBrandPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
       <Script
         id="schema-product"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productSchema),
-        }}
+          __html: JSON.stringify(productSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       <BrandPageTemplate brand={boschBrandData} />

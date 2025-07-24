@@ -12,12 +12,12 @@ import { darkSectionClasses, darkSectionPatternStyle } from '@/lib/utils/section
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Get Free Security System Quote | Security Dynamics Inc. | NJ & PA',
-  description: 'Get a free custom security system quote for your business. Professional installation in Mercer County NJ & Bucks County PA. No obligation consultation.',
-  keywords: 'security system quote, free security consultation, business security pricing, security system cost, commercial security quote',
+  title: 'Get Security System Quote | Security Dynamics Inc. | NJ & PA',
+  description: 'Get a custom security system quote for your business. Professional installation in Mercer County NJ & Bucks County PA. No obligation consultation.',
+  keywords: 'security system quote, professional security consultation, business security pricing, security system cost, commercial security quote',
   openGraph: {
-    title: 'Get Your Free Security System Quote | Security Dynamics Inc.',
-    description: 'Custom security solutions for businesses in NJ & PA. Get your free quote today. Professional installation and 24/7 monitoring available.',
+    title: 'Get Your Security System Quote | Security Dynamics Inc.',
+    description: 'Custom security solutions for businesses in NJ & PA. Get your Custom quote today. Professional installation and 24/7 monitoring available.',
     url: `${SITE_CONFIG.url}/quote`,
     siteName: 'Security Dynamics Inc.',
     images: [
@@ -25,28 +25,18 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Get a Security Quote from Security Dynamics Inc.',
-      },
+        alt: 'Get a Security Quote from Security Dynamics Inc.'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Get Free Security System Quote | Security Dynamics',
-    description: 'Custom security solutions for businesses. Free consultation and competitive pricing.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/quote`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/quote`}};
 
 export default function QuotePage() {
   return (
     <>
       {/* Hero Section */}
-      <Hero title="Get Your Free Security System Quote"
+      <Hero title="Get Your Security System Quote"
         subtitle="Custom solutions tailored to your business needs and budget"
         
         
@@ -105,7 +95,7 @@ export default function QuotePage() {
               </div>
               <h3 className="text-lg font-semibold mb-2">No Obligation</h3>
               <p className="text-gray-600">
-                Free consultation with no pressure to purchase
+                Professional consultation with no pressure to purchase
               </p>
             </div>
           </div>

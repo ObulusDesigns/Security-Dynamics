@@ -229,17 +229,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: \`\${service.name} \${location.name} | Security Dynamics\`,
-    description: \`${service.shortDescription} in ${location.name}. Call \${COMPANY_INFO.phone}.\`,
-    images: ['/images/og/\${serviceSlug}-\${locationSlug}.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: \`https://securitydynamicsnj.com/services/\${serviceSlug}/\${location.state?.toLowerCase().replace(' ', '-')}/\${location.county?.toLowerCase().replace(' ', '-')}/\${locationSlug}\`,
-  }
+    canonical: \`https://securitydynamicsnj.com/services/\${serviceSlug}/\${location.state?.toLowerCase().replace(' ', '-')}/\${location.county?.toLowerCase().replace(' ', '-')}/\${locationSlug}\`}
 };
 
 const nearbyAreas: ServiceArea[] = ${JSON.stringify(nearbyAreas, null, 2).split('\n').map((line, i) => i === 0 ? line : '  ' + line).join('\n')};

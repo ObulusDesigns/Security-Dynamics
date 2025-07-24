@@ -29,26 +29,15 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Terms of Service',
-      },
+        alt: 'Security Dynamics Terms of Service'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Terms of Service | Security Dynamics',
-    description: 'Terms and conditions for our security services.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/terms`,
-  },
+    canonical: `${SITE_CONFIG.url}/terms`},
   robots: {
     index: true,
-    follow: true,
-  },
-};
+    follow: true}};
 
 // Schema markup
 const breadcrumbSchema = {
@@ -260,8 +249,7 @@ export default function TermsOfServicePage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}

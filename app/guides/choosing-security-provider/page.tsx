@@ -40,22 +40,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Choosing a Security Provider Guide',
-      },
+        alt: 'Choosing a Security Provider Guide'},
     ],
     locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How to Choose the Right Security Provider',
-    description: 'Complete guide to selecting a security company for your business.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'article'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/guides/choosing-security-provider`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/guides/choosing-security-provider`}};
 
 // Schema markup
 const breadcrumbSchema = {
@@ -227,16 +217,14 @@ export default function ChoosingSecurityProviderPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-article"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
+          __html: JSON.stringify(articleSchema)}}
       />
 
       {/* Hero Section */}
@@ -693,7 +681,7 @@ export default function ChoosingSecurityProviderPage() {
               href="/contact"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
             >
-              Schedule Free Assessment
+              Schedule Security Assessment
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
             <a

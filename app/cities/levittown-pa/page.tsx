@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Security Systems ${city.name}, ${city.stateCode}`,
-    description: `Affordable home & business security in ${city.name}. 24/7 monitoring & local service. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/levittown-pa-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [
@@ -77,7 +69,7 @@ const _faqs = [
   },
   {
     question: `What makes your systems affordable for ${city.name} residents?`,
-    answer: `We offer flexible packages designed for ${city.name} homeowners, including low monthly monitoring rates, free basic installation, and equipment financing options. We believe everyone deserves quality security.`
+    answer: `We offer flexible packages designed for ${city.name} homeowners, including low monthly monitoring rates, Professional installation included, and equipment financing options. We believe everyone deserves quality security.`
   },
   {
     question: `Can you secure both my home and business in ${city.name}?`,

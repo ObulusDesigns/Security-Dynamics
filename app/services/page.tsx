@@ -19,7 +19,7 @@ import { darkSectionClasses, darkSectionPatternStyle, sectionPadding } from '@/l
 // Generate metadata
 export const metadata: Metadata = {
   title: 'Security Services | Access Control, Video Surveillance & Monitoring | Security Dynamics Inc.',
-  description: 'Comprehensive security services for NJ & PA businesses. Access control, video surveillance, intrusion detection, fire monitoring & 24/7 central station. Get free consultation!',
+  description: 'Comprehensive security services for NJ & PA businesses. Access control, video surveillance, intrusion detection, fire monitoring & 24/7 central station. Get Professional consultation!',
   keywords: 'security services, access control systems, video surveillance, intrusion detection, fire alarm monitoring, 24/7 monitoring, business security NJ PA',
   openGraph: {
     title: 'Commercial Security Services | NJ & PA | Security Dynamics Inc.',
@@ -31,22 +31,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Services for NJ & PA Businesses',
-      },
+        alt: 'Security Services for NJ & PA Businesses'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Security Services | Access Control & Surveillance',
-    description: 'Complete security solutions for businesses. 24/7 monitoring & support.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/services`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/services`}};
 
 // Schema markup
 const serviceListSchema = {
@@ -123,8 +113,7 @@ const serviceIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElem
   'fire-alarm-monitoring': FireIcon,
   'environmental-monitoring': CloudIcon,
   '24-7-central-station-monitoring': ClockIcon,
-  'security-systems': ShieldCheckIcon,
-};
+  'security-systems': ShieldCheckIcon};
 
 // Service categories
 const categories = [
@@ -164,24 +153,21 @@ export default function ServicesPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceListSchema),
-        }}
+          __html: JSON.stringify(serviceListSchema)}}
       />
       <Script
         id="breadcrumb-schema"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="organization-schema"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
 
       {/* Hero Section */}
@@ -191,7 +177,7 @@ export default function ServicesPage() {
         
         
       primaryCta={{
-          text: "Get Free Consultation",
+          text: "Get Professional Consultation",
           href: "/contact"
         }}
       />
@@ -392,7 +378,7 @@ export default function ServicesPage() {
             {[
               {
                 step: '1',
-                title: 'Free Consultation',
+                title: 'Professional Consultation',
                 description: 'Discuss your security needs and concerns'
               },
               {
@@ -482,7 +468,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <CTA 
         title="Ready to Secure Your Business?"
-        subtitle="Get a free consultation and custom security plan"
+        subtitle="Get a Professional consultation and custom security plan"
         showFeatures={true}
       />
     </>

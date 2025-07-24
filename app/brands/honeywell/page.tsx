@@ -18,22 +18,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Honeywell Security Systems - Security Dynamics',
-      },
+        alt: 'Honeywell Security Systems - Security Dynamics'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Honeywell Security Systems | Authorized Dealer NJ & PA',
-    description: 'Expert Honeywell installation. VISTA panels, Total Connect, smart integration. Free consultation.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/brands/honeywell`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/brands/honeywell`}};
 
 // Schema markup
 const organizationSchema = {
@@ -190,7 +180,7 @@ const honeywellBrandData = {
     },
     {
       question: 'What\'s the cost of a Honeywell security system installation?',
-      answer: 'Honeywell system costs vary based on your property size and selected features. Basic residential packages start around $699, while comprehensive smart home security systems range from $1,500-$3,000. Commercial installations are custom-quoted. We provide free assessments to determine the best solution for your budget.'
+      answer: 'Honeywell system costs vary based on your property size and selected features. Basic residential packages start around $699, while comprehensive smart home security systems range from $1,500-$3,000. Commercial installations are custom-quoted. We provide Security assessments to determine the best solution for your budget.'
     },
     {
       question: 'Does Security Dynamics service existing Honeywell systems?',
@@ -217,24 +207,21 @@ export default function HoneywellBrandPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
       <Script
         id="schema-product"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productSchema),
-        }}
+          __html: JSON.stringify(productSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       <BrandPageTemplate brand={honeywellBrandData} />

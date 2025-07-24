@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Business Security ${city.name}, ${city.stateCode}`,
-    description: `Commercial security & loss prevention in ${city.name}. Protect your business 24/7. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/bensalem-pa-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [

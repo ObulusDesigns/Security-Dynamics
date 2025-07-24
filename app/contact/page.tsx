@@ -16,12 +16,12 @@ import { darkSectionClasses, darkSectionPatternStyle, sectionPadding } from '@/l
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Contact Security Dynamics | Free Security Assessment | NJ & PA',
-  description: 'Contact Security Dynamics for business security systems in Mercer County NJ & Bucks County PA. Free assessments, 24/7 support. Call (609) 394-8800.',
+  title: 'Contact Security Dynamics | Security Assessment | NJ & PA',
+  description: 'Contact Security Dynamics for business security systems in Mercer County NJ & Bucks County PA. Security assessments, 24/7 support. Call (609) 394-8800.',
   keywords: 'contact Security Dynamics, security company near me, security assessment NJ, security assessment PA, business security consultation',
   openGraph: {
-    title: 'Contact Security Dynamics Inc. | Get Your Free Security Assessment',
-    description: 'Expert security solutions for NJ & PA businesses. Free on-site assessment. 24/7 support. Call (609) 394-8800.',
+    title: 'Contact Security Dynamics Inc. | Get Your Security Assessment',
+    description: 'Expert security solutions for NJ & PA businesses. Professional on-site assessment. 24/7 support. Call (609) 394-8800.',
     url: `${SITE_CONFIG.url}/contact`,
     siteName: 'Security Dynamics Inc.',
     images: [
@@ -29,22 +29,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Contact Security Dynamics Inc.',
-      },
+        alt: 'Contact Security Dynamics Inc.'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Contact Security Dynamics | Free Security Assessment',
-    description: 'Get expert security solutions for your business. Free assessment. 24/7 support.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/contact`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/contact`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -116,18 +106,16 @@ export default function ContactPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}
       <Hero
         title="Contact Security Dynamics"
-        subtitle="Get Your Free Security Assessment Today"
+        subtitle="Get Your Security Assessment Today"
         description="Ready to protect your business? Contact our security experts for a comprehensive assessment and customized solution. Available 24/7 for emergencies."
         showEmergencyBadge={true}
       />
@@ -168,7 +156,7 @@ export default function ContactPage() {
             {/* Schedule Assessment */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center group hover:border-white/40 transition-all duration-300">
               <BuildingOfficeIcon className="w-16 h-16 text-red-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold text-white mb-2">Free Assessment</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Security Assessment</h3>
               <p className="text-gray-300 mb-6">Get a comprehensive security evaluation at no cost</p>
               <Link
                 href="#contact-form"
@@ -205,7 +193,7 @@ export default function ContactPage() {
             {/* Column 1 - Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Request Your Free Security Assessment
+                Request Your Security Assessment
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Complete the form below and our security experts will contact you within 24 hours
@@ -393,7 +381,7 @@ export default function ContactPage() {
                 answer: 'Our average emergency response time is 15 minutes within our service areas. We have technicians on-call 24/7 throughout Mercer County, NJ and Bucks County, PA.'
               },
               {
-                question: 'What does the free security assessment include?',
+                question: 'What does the professional security assessment include?',
                 answer: 'Our comprehensive assessment includes a full site evaluation, vulnerability analysis, camera placement planning, access control recommendations, and a detailed quote with multiple options to fit your budget.'
               },
               {
@@ -444,7 +432,7 @@ export default function ContactPage() {
               href="#contact-form"
               className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
-              Schedule Free Assessment
+              Schedule Security Assessment
             </Link>
           </div>
         </div>

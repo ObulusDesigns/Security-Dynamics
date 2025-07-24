@@ -16,7 +16,7 @@ import Script from 'next/script';
 // SEO Metadata
 export const metadata: Metadata = {
   title: '7 Signs Your Business Security System Needs an Upgrade | 2025 Guide',
-  description: 'Is your security system outdated? Learn the warning signs: frequent false alarms, grainy footage, integration issues & more. Free security assessment available.',
+  description: 'Is your security system outdated? Learn the warning signs: frequent false alarms, grainy footage, integration issues & more. Professional security assessment available.',
   keywords: 'security system upgrade, outdated security system, security system replacement, old security cameras, upgrade access control, security system modernization',
   openGraph: {
     title: '7 Signs Your Security System Needs an Upgrade',
@@ -28,24 +28,14 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security System Upgrade Signs',
-      },
+        alt: 'Security System Upgrade Signs'},
     ],
     locale: 'en_US',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
-    authors: ['Security Dynamics Inc.'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '7 Signs Your Security System Needs an Upgrade',
-    description: 'Is your business security system showing its age? Learn the warning signs and upgrade options.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    authors: ['Security Dynamics Inc.']},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/blog/signs-security-system-needs-upgrade`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/blog/signs-security-system-needs-upgrade`}};
 
 // Schema markup
 const articleSchema = {
@@ -105,12 +95,10 @@ export default function SecuritySystemUpgradeSignsPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
+          __html: JSON.stringify(articleSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       {/* Hero Section */}
@@ -120,7 +108,7 @@ export default function SecuritySystemUpgradeSignsPage() {
         
         
         primaryCta={{
-          text: "Get Free Security Assessment",
+          text: "Get Security Assessment",
           href: "/contact"
         }}
       />
@@ -630,14 +618,14 @@ export default function SecuritySystemUpgradeSignsPage() {
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Don't wait for a security incident to reveal your system's weaknesses. 
-                Get a free professional assessment and upgrade consultation today.
+                Get a professional assessment and upgrade consultation today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center bg-accent hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
                 >
-                  Schedule Free Assessment
+                  Schedule Security Assessment
                   <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
@@ -664,7 +652,7 @@ export default function SecuritySystemUpgradeSignsPage() {
               technology.
             </p>
             <p className="text-gray-700 font-semibold">
-              Take the first step today. Schedule a free security assessment and discover how modern technology 
+              Take the first step today. Schedule a professional security assessment and discover how modern technology 
               can transform your business protection while actually saving you money.
             </p>
           </section>
@@ -732,7 +720,7 @@ export default function SecuritySystemUpgradeSignsPage() {
             Is Your Security System Due for an Upgrade?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Get a free, no-obligation security assessment from our experts. We'll evaluate your current system 
+            Get a no-obligation security assessment from our experts. We'll evaluate your current system 
             and show you exactly what modern technology can do for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -740,7 +728,7 @@ export default function SecuritySystemUpgradeSignsPage() {
               href="/contact"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
-              Get Free Security Assessment
+              Get Security Assessment
             </Link>
             <a
               href={`tel:${COMPANY_INFO.phone}`}

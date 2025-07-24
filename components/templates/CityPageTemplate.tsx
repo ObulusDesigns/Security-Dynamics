@@ -33,7 +33,7 @@ export function CityPageTemplate({
         
         location={`${city.name}, ${city.state}`}
       primaryCta={{
-          text: "Get Free Security Assessment",
+          text: "Get Security Assessment",
           href: "/contact"
         }}
       />
@@ -297,7 +297,7 @@ export function CityPageTemplate({
                 answer: `Our average emergency response time in ${city.name} is 15 minutes or less. We have local technicians familiar with the area who can quickly reach any business location.`
               },
               {
-                question: `Do you offer free security assessments for ${city.name} businesses?`,
+                question: `Do you offer professional security assessments for ${city.name} businesses?`,
                 answer: `Yes, we provide complimentary security assessments for all ${city.name} businesses. Our experts will evaluate your current security posture and recommend solutions tailored to your specific needs and budget.`
               },
               {
@@ -313,7 +313,7 @@ export function CityPageTemplate({
       {/* CTA Section */}
       <CTA 
         title={`Ready to Secure Your ${city.name} Business?`}
-        subtitle="Get a free security assessment from our local team"
+        subtitle="Get a security assessment from our local team"
         showFeatures={true}
       />
     </>

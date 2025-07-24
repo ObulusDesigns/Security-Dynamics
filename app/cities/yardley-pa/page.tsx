@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Luxury Security ${city.name}, ${city.stateCode}`,
-    description: `Premium security for ${city.name}'s finest properties. Riverfront & luxury home protection. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/yardley-pa-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [

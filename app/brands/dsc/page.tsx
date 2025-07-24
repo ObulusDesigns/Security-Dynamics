@@ -18,22 +18,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'DSC Security Systems - Security Dynamics',
-      },
+        alt: 'DSC Security Systems - Security Dynamics'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'DSC Security Systems | Authorized Dealer NJ & PA',
-    description: 'Expert DSC installation. PowerSeries Neo, iotega wireless. 24/7 monitoring. Free consultation.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/brands/dsc`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/brands/dsc`}};
 
 // Schema markup
 const organizationSchema = {
@@ -181,7 +171,7 @@ const dscBrandData = {
     },
     {
       question: 'How much does a DSC security system cost?',
-      answer: 'DSC system costs vary based on property size, number of devices, and features selected. Basic residential systems start around $599, while comprehensive commercial solutions are custom-quoted. We offer free on-site assessments to provide accurate pricing for your specific needs.'
+      answer: 'DSC system costs vary based on property size, number of devices, and features selected. Basic residential systems start around $599, while comprehensive commercial solutions are custom-quoted. We offer on-site assessments to provide accurate pricing for your specific needs.'
     },
     {
       question: 'Does Security Dynamics provide warranty and support for DSC systems?',
@@ -211,24 +201,21 @@ export default function DSCBrandPage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
+          __html: JSON.stringify(organizationSchema)}}
       />
       <Script
         id="schema-product"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productSchema),
-        }}
+          __html: JSON.stringify(productSchema)}}
       />
       <Script
         id="schema-breadcrumb"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
 
       <BrandPageTemplate brand={dscBrandData} />

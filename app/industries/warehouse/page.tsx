@@ -30,22 +30,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Warehouse Security Systems',
-      },
+        alt: 'Warehouse Security Systems'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Warehouse Security Systems | Distribution Center Protection',
-    description: 'Advanced security solutions for warehouses & logistics facilities. Expert installation & monitoring.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/industries/warehouse`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/industries/warehouse`}};
 
 // Schema markup
 const serviceSchema = {
@@ -57,11 +47,9 @@ const serviceSchema = {
   provider: {
     '@type': 'SecuritySystemInstallationService',
     name: 'Security Dynamics Inc.',
-    telephone: COMPANY_INFO.phone,
-  },
+    telephone: COMPANY_INFO.phone},
   areaServed: ['New Jersey', 'Pennsylvania'],
-  serviceType: 'Warehouse Security',
-};
+  serviceType: 'Warehouse Security'};
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -132,16 +120,13 @@ export default function WarehouseSecurityPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Hero Section */}
@@ -525,7 +510,7 @@ export default function WarehouseSecurityPage() {
       {/* CTA Section */}
       <CTA
         title="Eliminate Warehouse Theft Today"
-        subtitle="Get a free security assessment and see how much you could save"
+        subtitle="Get a professional security assessment and see how much you could save"
         showFeatures={true}
       />
     </>

@@ -30,22 +30,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Multi-Family Security Systems',
-      },
+        alt: 'Multi-Family Security Systems'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Multi-Family Security Systems | Apartment Complex Protection',
-    description: 'Advanced security solutions for apartment complexes and multi-family properties. Expert installation & monitoring.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/industries/multi-family`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/industries/multi-family`}};
 
 // Schema markup
 const serviceSchema = {
@@ -57,11 +47,9 @@ const serviceSchema = {
   provider: {
     '@type': 'SecuritySystemInstallationService',
     name: 'Security Dynamics Inc.',
-    telephone: COMPANY_INFO.phone,
-  },
+    telephone: COMPANY_INFO.phone},
   areaServed: ['New Jersey', 'Pennsylvania'],
-  serviceType: 'Multi-Family Security',
-};
+  serviceType: 'Multi-Family Security'};
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -132,16 +120,13 @@ export default function MultiFamilySecurityPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
+          __html: JSON.stringify(serviceSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Hero Section */}
@@ -597,7 +582,7 @@ export default function MultiFamilySecurityPage() {
       {/* CTA Section */}
       <CTA
         title="Create Safer Communities Today"
-        subtitle="Get a free security assessment and custom solution for your property"
+        subtitle="Get a professional security assessment and custom solution for your property"
         showFeatures={true}
       />
     </>

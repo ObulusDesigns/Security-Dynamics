@@ -13,7 +13,7 @@ const nearbyLocations = allLocations.filter(loc =>
 // Generate metadata
 export const metadata: Metadata = {
   title: `${hamilton.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Warehouse & industrial security systems in Hamilton Township NJ. Protect distribution centers, manufacturing facilities & logistics operations. Get free quote!',
+  description: 'Warehouse & industrial security systems in Hamilton Township NJ. Protect distribution centers, manufacturing facilities & logistics operations. Get Custom quote!',
   keywords: hamilton.seoData.primaryKeyword + ', ' + hamilton.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${hamilton.seoData.primaryKeyword} | Warehouse Security`,
@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Hamilton Township NJ',
-      },
+        alt: 'Security Systems in Hamilton Township NJ'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: hamilton.seoData.primaryKeyword,
-    description: 'Leading warehouse security provider in Hamilton Township NJ.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/hamilton-township-nj`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/hamilton-township-nj`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -162,16 +152,13 @@ export default function HamiltonTownshipNJPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

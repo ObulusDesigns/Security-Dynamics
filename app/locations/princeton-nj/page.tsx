@@ -13,7 +13,7 @@ const nearbyLocations = allLocations.filter(loc =>
 // Generate metadata
 export const metadata: Metadata = {
   title: `${princeton.seoData.primaryKeyword} | Security Dynamics Inc.`,
-  description: 'Advanced security systems for Princeton NJ businesses, tech companies & university facilities. Access control, video surveillance & 24/7 monitoring. Get free assessment!',
+  description: 'Advanced security systems for Princeton NJ businesses, tech companies & university facilities. Access control, video surveillance & 24/7 monitoring. Get Security assessment!',
   keywords: princeton.seoData.primaryKeyword + ', ' + princeton.seoData.secondaryKeywords.join(', '),
   openGraph: {
     title: `${princeton.seoData.primaryKeyword} | Tech & University Security`,
@@ -25,22 +25,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Systems in Princeton NJ',
-      },
+        alt: 'Security Systems in Princeton NJ'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: princeton.seoData.primaryKeyword,
-    description: 'Leading security provider for Princeton tech companies & university facilities.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/locations/princeton-nj`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/locations/princeton-nj`}};
 
 // Schema markup
 const localBusinessSchema = {
@@ -162,16 +152,13 @@ export default function PrincetonNJPage() {
     <>
       {/* Schema Markup */}
       <Script id="schema-1" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
+          __html: JSON.stringify(localBusinessSchema)}}
       />
       <Script id="schema-2" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script id="schema-3" type="application/ld+json" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
+          __html: JSON.stringify(faqSchema)}}
       />
 
       {/* Page Content */}

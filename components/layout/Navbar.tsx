@@ -26,14 +26,19 @@ const navigation = {
     { name: 'All Services', href: '/services' }
   ],
   brands: [
-    { name: 'DSC (Digital Security Controls)', href: '/brands/dsc' },
     { name: 'Honeywell', href: '/brands/honeywell' },
-    { name: 'Bosch', href: '/brands/bosch' },
-    { name: 'Axis Communications', href: '/brands/axis' },
-    { name: 'DMP (Digital Monitoring Products)', href: '/brands/dmp' },
     { name: 'Alarm.com', href: '/brands/alarm-com' },
-    { name: '2GIG', href: '/brands/2gig' },
-    { name: 'Qolsys', href: '/brands/qolsys' }
+    { name: 'Qolsys', href: '/brands/qolsys' },
+    { name: 'Hikvision', href: '/brands/hikvision' },
+    { name: 'OpenEye', href: '/brands/openeye' },
+    { name: 'Keri Systems', href: '/brands/keri-systems' },
+    { name: 'Turing AI', href: '/brands/turing-ai' },
+    { name: 'Bosch', href: '/brands/bosch' },
+    { name: 'Fire-Lite', href: '/brands/firelite' },
+    { name: 'Silent Knight', href: '/brands/silent-knight' },
+    { name: 'Potter', href: '/brands/potter' },
+    { name: 'NAPCO', href: '/brands/napco' },
+    { name: 'DSC', href: '/brands/dsc' }
   ],
   locations: [
     { name: 'Mercer County, NJ', href: '/service-areas/mercer-county-nj' },

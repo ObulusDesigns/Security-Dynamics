@@ -32,17 +32,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Security Systems ${city.name}, ${city.stateCode}`,
-    description: `Professional security in ${city.name}. Business & residential protection. 24/7 monitoring. Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/east-windsor-nj-security.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/cities/${citySlug}`}
 };
 
 const serviceAreas: ServiceArea[] = [

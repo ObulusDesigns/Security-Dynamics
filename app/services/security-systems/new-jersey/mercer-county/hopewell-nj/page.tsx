@@ -41,17 +41,9 @@ export const metadata: Metadata = {
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `Integrated Security Systems ${location.name} | Security Dynamics`,
-    description: `Security systems Hopewell Call ${COMPANY_INFO.phone}.`,
-    images: ['/images/og/security-systems-hopewell-nj.jpg'],
-  },
+    type: 'website'},
   alternates: {
-    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`,
-  }
+    canonical: `https://securitydynamicsnj.com/services/${serviceSlug}/${location.state?.toLowerCase().replace(' ', '-')}/${location.county?.toLowerCase().replace(' ', '-')}/${locationSlug}`}
 };
 
 const nearbyAreas: ServiceArea[] = [

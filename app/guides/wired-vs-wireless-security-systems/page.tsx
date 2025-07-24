@@ -36,22 +36,12 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Wired vs Wireless Security Systems Guide',
-      },
+        alt: 'Wired vs Wireless Security Systems Guide'},
     ],
     locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Wired vs Wireless Security Systems | Which is Best?',
-    description: 'Complete comparison guide for business security systems.',
-    images: [SITE_CONFIG.ogImage],
-  },
+    type: 'article'},
   alternates: {
-    canonical: `${SITE_CONFIG.url}/guides/wired-vs-wireless-security-systems`,
-  },
-};
+    canonical: `${SITE_CONFIG.url}/guides/wired-vs-wireless-security-systems`}};
 
 // Schema markup
 const breadcrumbSchema = {
@@ -118,16 +108,14 @@ export default function WiredVsWirelessGuidePage() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
+          __html: JSON.stringify(breadcrumbSchema)}}
       />
       <Script
         id="schema-article"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleSchema),
-        }}
+          __html: JSON.stringify(articleSchema)}}
       />
 
       {/* Hero Section */}
@@ -675,7 +663,7 @@ export default function WiredVsWirelessGuidePage() {
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Our security experts can assess your specific needs and recommend the perfect solution—whether 
-            wired, wireless, or hybrid. Get a free consultation and custom system design.
+            wired, wireless, or hybrid. Get a Professional consultation and custom system design.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -683,7 +671,7 @@ export default function WiredVsWirelessGuidePage() {
               href="/contact"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
             >
-              Get Free Consultation
+              Get Professional Consultation
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
             <a
