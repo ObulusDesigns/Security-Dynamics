@@ -82,24 +82,24 @@ export function Testimonials({
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Google Review Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-3">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center space-x-4">
                   {/* Profile Avatar */}
                   <div 
-                    className="w-10 h-10 rounded-full flex items-center justify-center text-white font-medium shadow-sm"
+                    className="w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold shadow-lg"
                     style={{ backgroundColor: testimonial.id === 1 ? '#a855f7' : testimonial.id === 2 ? '#22c55e' : '#f97316' }}
                   >
                     {testimonial.initials}
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900">{testimonial.author}</div>
+                    <div className="font-bold text-gray-900 text-lg">{testimonial.author}</div>
                     <div className="flex items-center space-x-2">
                       <div className="flex">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -114,14 +114,14 @@ export function Testimonials({
                 <Image
                   src="/icons/google.webp"
                   alt="Google"
-                  width={32}
-                  height={32}
-                  className="h-8 w-auto"
+                  width={36}
+                  height={36}
+                  className="h-9 w-auto opacity-80"
                 />
               </div>
               
               {/* Content */}
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-base">
                 {testimonial.content}
               </p>
             </div>
@@ -129,12 +129,12 @@ export function Testimonials({
         </div>
 
         {/* Leave a Review Button */}
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <a
             href="https://www.google.com/search?q=Security+Dynamics+Inc+Millstone+NJ&rlz=1C1CHBF_enUS&oq=Security+Dynamics+Inc+Millstone+NJ#lrd=0x89c3e7a8f9f9f9f9:0x1234567890abcdef,3"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-red-600 border-2 border-red-600 px-6 py-3 rounded font-semibold hover:bg-red-50 transition-all duration-300"
+            className="inline-flex items-center gap-3 bg-white text-red-600 border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-red-50 hover:border-red-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             <Image
               src="/icons/google.webp"
