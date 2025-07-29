@@ -8,11 +8,11 @@ export const COMPANY_INFO = {
   emergencyPhone: '(609) 394-8800',
   email: 'sdynamicsnj@gmail.com',
   address: {
-    street: '520 Route 33',
-    city: 'Millstone',
+    street: '4573 S Broad St # 100',
+    city: 'Hamilton Township',
     state: 'New Jersey',
     stateCode: 'NJ',
-    zip: '08535',
+    zip: '08620',
     country: 'US'
   },
   serviceAreas: ['Mercer County, NJ', 'Bucks County, PA'],

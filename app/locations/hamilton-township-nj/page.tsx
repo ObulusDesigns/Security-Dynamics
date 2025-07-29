@@ -37,16 +37,16 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'SecuritySystemInstallationService',
   '@id': `${SITE_CONFIG.url}/locations/hamilton-township-nj#business`,
-  name: 'Security Dynamics Inc. - Hamilton Township',
+  name: 'Security Dynamics Inc. - Hamilton Township Office',
   image: `${SITE_CONFIG.url}/logo-1.webp`,
   telephone: COMPANY_INFO.phone,
   address: {
     '@type': 'PostalAddress',
     streetAddress: COMPANY_INFO.address.street,
-    addressLocality: 'Hamilton Township',
-    addressRegion: 'NJ',
-    postalCode: '08619',
-    addressCountry: 'US'
+    addressLocality: COMPANY_INFO.address.city,
+    addressRegion: COMPANY_INFO.address.stateCode,
+    postalCode: COMPANY_INFO.address.zip,
+    addressCountry: COMPANY_INFO.address.country
   },
   geo: {
     '@type': 'GeoCoordinates',

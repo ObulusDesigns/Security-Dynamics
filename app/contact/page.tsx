@@ -55,8 +55,8 @@ const localBusinessSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '40.3573',
-    longitude: '-74.6672'
+    latitude: '40.2054',
+    longitude: '-74.6928'
   },
   url: SITE_CONFIG.url,
   areaServed: [
@@ -235,7 +235,7 @@ export default function ContactPage() {
                         {COMPANY_INFO.address.city}, {COMPANY_INFO.address.state} {COMPANY_INFO.address.zip}
                       </p>
                       <a 
-                        href="https://maps.google.com/?q=520+Route+33+Millstone+NJ+08535"
+                        href="https://maps.google.com/?q=4573+S+Broad+St+%23100+Hamilton+Township+NJ+08620"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 text-sm mt-2 inline-block font-semibold"
@@ -296,7 +296,7 @@ export default function ContactPage() {
               {/* Map */}
               <div className="bg-gray-100 rounded-2xl p-2" style={{ height: '400px' }}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.123456789!2d-74.5089!3d40.2543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3d1234567890%3A0x1234567890abcdef!2s520+NJ-33%2C+Millstone+Township%2C+NJ+08535!5e0!3m2!1sen!2sus!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.8975!2d-74.6949!3d40.2033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c157d9b4b5a6e7%3A0x8e6f8e5f5c5d9876!2s4573+S+Broad+St+%23100%2C+Hamilton+Township%2C+NJ+08620!5e0!3m2!1sen!2sus!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
