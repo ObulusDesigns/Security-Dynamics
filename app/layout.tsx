@@ -6,16 +6,12 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { RecaptchaBadge } from '@/components/ui/RecaptchaBadge';
 import { SITE_CONFIG, TRACKING } from '@/lib/utils/constants';
+import StructuredData from '@/components/seo/StructuredData';
+import { organizationSchema } from '@/lib/utils/structured-data';
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true,
-  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://securitydynamicsinc.com'),
   title: SITE_CONFIG.defaultTitle,
   description: SITE_CONFIG.defaultDescription,
   keywords: SITE_CONFIG.defaultKeywords,
@@ -42,12 +38,21 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Security Dynamics Inc. - Advanced Security Solutions'},
+        alt: 'Security Dynamics Inc. - Advanced Security Solutions',
+      },
     ],
     locale: 'en_US',
-    type: 'website'},
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_CONFIG.defaultTitle,
+    description: SITE_CONFIG.defaultDescription,
+    images: [SITE_CONFIG.ogImage],
+  },
   alternates: {
-    canonical: SITE_CONFIG.url},
+    canonical: SITE_CONFIG.url,
+  },
   robots: {
     index: true,
     follow: true,
@@ -56,22 +61,23 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1}}};
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function RootLayout({
-  children}: {
+  children,
+}: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <head>
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} pb-16 lg:pb-0`}>
+      <body className={inter.className}>
+        <StructuredData data={organizationSchema} />
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
@@ -93,7 +99,8 @@ export default function RootLayout({
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
                   gtag('config', '${TRACKING.googleAnalytics}');
-                `}}
+                `,
+              }}
             />
           </>
         )}

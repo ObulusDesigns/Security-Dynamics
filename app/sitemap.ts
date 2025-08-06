@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/industries`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -37,6 +43,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/quote`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/pay-service-bill`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/pay-monitoring-bill`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
     },
   ];
 
@@ -86,7 +122,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/guides/business-security-system-cost`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.6,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/guides/commercial-security-system-costs`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/guides/wired-vs-wireless-security-systems`,
@@ -95,7 +137,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/guides/choosing-security-company`,
+      url: `${baseUrl}/guides/choosing-security-provider`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/learning-center/guides/complete-guide-business-security-2024`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/learning-center/guides/home-security-buyers-guide`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/learning-center/guides/security-compliance-regulations-guide`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
@@ -105,30 +165,69 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog pages
   const blogPages = [
     {
-      url: `${baseUrl}/blog/pa-nj-surveillance-laws`,
+      url: `${baseUrl}/blog/cannabis-business-security-requirements-nj-pa`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/access-control-best-practices`,
+      url: `${baseUrl}/blog/how-to-prevent-false-alarms-save-money`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/video-analytics-ai-security`,
+      url: `${baseUrl}/blog/retail-loss-prevention-strategies-2024`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/blog/preventing-false-alarms`,
+      url: `${baseUrl}/blog/security-system-maintenance-checklist`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/security-technology-trends-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/security-trends-2024-ai-smart-technology`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/signs-security-system-needs-upgrade`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     },
   ];
+
+  // Case Studies
+  const caseStudyPages = [
+    {
+      url: `${baseUrl}/case-studies/princeton-law-firm`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.7,
+    },
+  ];
+
+  // Brand pages
+  const brandPages = [
+    'alarm-com', 'bosch', 'dsc', 'firelite', 'hikvision', 'honeywell',
+    'keri-systems', 'napco', 'openeye', 'potter', 'qolsys', 'silent-knight', 'turing-ai'
+  ].map(brand => ({
+    url: `${baseUrl}/brands/${brand}`,
+    lastModified: new Date(),
+    changeFrequency: 'yearly' as const,
+    priority: 0.5,
+  }));
 
   // Service + Location combination pages (top priority combinations)
   const serviceLocationPages = [
@@ -174,6 +273,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...industryPages,
     ...guidePages,
     ...blogPages,
+    ...caseStudyPages,
+    ...brandPages,
     ...serviceLocationPages,
   ];
 }
