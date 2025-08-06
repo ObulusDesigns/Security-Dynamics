@@ -59,10 +59,10 @@ export default function CommercialSecurityCostGuide() {
       <HeroSection
         title="Commercial Security System Costs in New Jersey"
         subtitle="2025 Complete Pricing Guide for Mercer County & Bucks County Businesses"
-        backgroundImage="/images/commercial-building-security.jpg"
-        ctaText="Get Custom Quote"
-        ctaLink="/quote"
-        height="medium"
+        primaryCta={{
+          text: "Get Custom Quote",
+          href: "/quote"
+        }}
       />
 
       <div className="py-16 bg-white">
@@ -711,11 +711,7 @@ export default function CommercialSecurityCostGuide() {
 
       <CTASection
         title="Ready to Invest in Your Business Security?"
-        description="Get a detailed quote with transparent pricing and ROI analysis for your Mercer County or Bucks County business."
-        primaryButtonText="Get Your Custom Quote"
-        primaryButtonLink="/quote"
-        secondaryButtonText="Download Pricing Guide"
-        secondaryButtonLink="/guides/commercial-security-system-costs/download"
+        subtitle="Get a detailed quote with transparent pricing and ROI analysis for your Mercer County or Bucks County business."
       />
     </>
   );

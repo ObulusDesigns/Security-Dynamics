@@ -77,10 +77,10 @@ export default function PrincetonSecurityPage() {
       <HeroSection
         title="Commercial Security Systems in Princeton, NJ"
         subtitle="Protecting Princeton's Businesses, Law Firms & Research Facilities Since 1984"
-        backgroundImage="/images/princeton-downtown.jpg"
-        ctaText="Get Free Security Assessment"
-        ctaLink="/quote"
-        height="medium"
+        primaryCta={{
+          text: "Get Free Security Assessment",
+          href: "/quote"
+        }}
       />
 
       {/* Local Trust Signals */}
@@ -379,11 +379,7 @@ export default function PrincetonSecurityPage() {
 
       <CTASection
         title="Protect Your Princeton Business Today"
-        description="Join 500+ Princeton businesses that trust Security Dynamics for their security needs. Get a free, no-obligation security assessment."
-        primaryButtonText="Schedule Princeton Assessment"
-        primaryButtonLink="/quote"
-        secondaryButtonText="Call (609) 882-8988"
-        secondaryButtonLink="tel:609-882-8988"
+        subtitle="Join 500+ Princeton businesses that trust Security Dynamics for their security needs. Get a free, no-obligation security assessment."
       />
     </>
   );

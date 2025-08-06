@@ -78,10 +78,10 @@ export default function TrentonSecurityPage() {
       <HeroSection
         title="Commercial Security Systems in Trenton, NJ"
         subtitle="Headquarters in Hamilton Township - Protecting New Jersey's Capital Since 1984"
-        backgroundImage="/images/trenton-skyline.jpg"
-        ctaText="Get Free Security Assessment"
-        ctaLink="/quote"
-        height="medium"
+        primaryCta={{
+          text: "Get Free Security Assessment",
+          href: "/quote"
+        }}
       />
 
       {/* Local Authority Signals */}
@@ -467,11 +467,7 @@ export default function TrentonSecurityPage() {
 
       <CTASection
         title="Secure Your Trenton Business with Local Experts"
-        description="Join 1,000+ Trenton businesses protected by Security Dynamics. Get a free security assessment from your hometown security provider."
-        primaryButtonText="Schedule Trenton Assessment"
-        primaryButtonLink="/quote"
-        secondaryButtonText="Visit Our Hamilton Office"
-        secondaryButtonLink="/contact"
+        subtitle="Join 1,000+ Trenton businesses protected by Security Dynamics. Get a free security assessment from your hometown security provider."
       />
     </>
   );
