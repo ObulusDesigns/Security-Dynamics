@@ -1,4 +1,4 @@
-import { Service, FAQPage, WithContext, LocalBusiness, Product, BreadcrumbList } from 'schema-dts';
+import { Service, FAQPage, WithContext, LocalBusiness, Product, BreadcrumbList, ItemAvailability } from 'schema-dts';
 
 export const organizationSchema: WithContext<LocalBusiness> = {
   '@context': 'https://schema.org',
@@ -247,12 +247,12 @@ export function generateProductSchema(product: {
       name: product.brand || 'Security Dynamics Inc.'
     },
     offers: product.offers ? {
-      '@type': 'Offer',
+      '@type': 'Offer' as const,
       price: product.offers.price,
       priceCurrency: product.offers.priceCurrency || 'USD',
-      availability: product.offers.availability || 'https://schema.org/InStock',
+      availability: (product.offers.availability || 'https://schema.org/InStock') as ItemAvailability,
       seller: {
-        '@type': 'LocalBusiness',
+        '@type': 'LocalBusiness' as const,
         name: 'Security Dynamics Inc.',
         '@id': 'https://securitydynamicsinc.com/#organization'
       }

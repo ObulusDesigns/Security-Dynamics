@@ -12,13 +12,16 @@ export const reportWebVitals = (metric: WebVitalsMetric) => {
     console.log(metric);
     
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag('event', metric.name, {
-        value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-        event_category: 'Web Vitals',
-        event_label: metric.id,
-        non_interaction: true,
-      });
+    if (typeof window !== 'undefined') {
+      const windowWithGtag = window as Window & { gtag?: (...args: unknown[]) => void };
+      if (windowWithGtag.gtag) {
+        windowWithGtag.gtag('event', metric.name, {
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          non_interaction: true,
+        });
+      }
     }
   }
 };
