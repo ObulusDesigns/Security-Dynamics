@@ -1,7 +1,8 @@
 import Script from 'next/script';
+import { WithContext, Thing } from 'schema-dts';
 
 interface StructuredDataProps {
-  data: any;
+  data: WithContext<Thing>;
 }
 
 export default function StructuredData({ data }: StructuredDataProps) {

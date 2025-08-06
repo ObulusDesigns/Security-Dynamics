@@ -1,12 +1,19 @@
 // Core Web Vitals monitoring and optimization utilities
 
-export const reportWebVitals = (metric: any) => {
+interface WebVitalsMetric {
+  name: string;
+  value: number;
+  label?: string;
+  id: string;
+}
+
+export const reportWebVitals = (metric: WebVitalsMetric) => {
   if (metric.label === 'web-vital') {
     console.log(metric);
     
     // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', metric.name, {
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag('event', metric.name, {
         value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
         event_category: 'Web Vitals',
         event_label: metric.id,
@@ -21,7 +28,7 @@ export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return;
   
   const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
+  const imageObserver = new IntersectionObserver((entries, _observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
@@ -83,8 +90,8 @@ export const optimizeINP = () => {
   // Debounce expensive operations
   let debounceTimer: NodeJS.Timeout;
   
-  const debounce = (func: Function, delay: number) => {
-    return (...args: any[]) => {
+  const debounce = <T extends unknown[]>(func: (...args: T) => void, delay: number) => {
+    return (...args: T) => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => func(...args), delay);
     };

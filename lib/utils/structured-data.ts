@@ -1,4 +1,4 @@
-import { Organization, Service, FAQPage, WithContext, LocalBusiness, Product } from 'schema-dts';
+import { Service, FAQPage, WithContext, LocalBusiness, Product, BreadcrumbList } from 'schema-dts';
 
 export const organizationSchema: WithContext<LocalBusiness> = {
   '@context': 'https://schema.org',
@@ -263,7 +263,7 @@ export function generateProductSchema(product: {
 export function generateBreadcrumbSchema(items: Array<{
   name: string;
   url: string;
-}>): WithContext<any> {
+}>): WithContext<BreadcrumbList> {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

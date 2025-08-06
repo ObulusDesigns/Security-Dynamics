@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Hero as HeroSection } from '@/components/sections/Hero';
 import { CTA as CTASection } from '@/components/sections/CTA';
 import { 
