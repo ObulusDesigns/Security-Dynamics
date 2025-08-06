@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { HeroSection } from '@/components/sections/HeroSection';
-import { CTASection } from '@/components/sections/CTASection';
+import { Hero as HeroSection } from '@/components/sections/Hero';
+import { CTA as CTASection } from '@/components/sections/CTA';
 import { CheckCircleIcon, CalculatorIcon, PhoneIcon, ShieldCheckIcon, CurrencyDollarIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import StructuredData from '@/components/seo/StructuredData';
 import { generateFAQSchema, generateBreadcrumbSchema } from '@/lib/utils/structured-data';

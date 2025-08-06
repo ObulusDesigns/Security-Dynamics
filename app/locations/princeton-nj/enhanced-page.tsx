@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HeroSection } from '@/components/sections/HeroSection';
-import { CTASection } from '@/components/sections/CTASection';
-import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
+import { Hero as HeroSection } from '@/components/sections/Hero';
+import { CTA as CTASection } from '@/components/sections/CTA';
+import { Testimonials as TestimonialsSection } from '@/components/sections/Testimonials';
 import { 
   BuildingOfficeIcon, 
   AcademicCapIcon, 
