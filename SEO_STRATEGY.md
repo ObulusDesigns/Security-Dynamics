@@ -115,7 +115,7 @@ A dedicated resource center positioning SDI as the regional security authority.
 - **Name**: Security Dynamics Inc.
 - **Address**: 6 David Brainerd Dr, Hamilton Township, NJ 08690
 - **Phone**: (609) 882-8988
-- **Website**: https://securitydynamicsinc.com
+- **Website**: https://securitydynamicsnj.com
 
 ## Part 4: Competitive Analysis & Positioning
 

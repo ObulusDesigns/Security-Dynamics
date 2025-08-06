@@ -5,8 +5,8 @@
 - **Business Name**: Security Dynamics Inc.
 - **Address**: 6 David Brainerd Dr, Hamilton Township, NJ 08690
 - **Phone**: (609) 882-8988
-- **Website**: https://securitydynamicsinc.com
-- **Email**: info@securitydynamicsinc.com
+- **Website**: https://securitydynamicsnj.com
+- **Email**: info@securitydynamicsnj.com
 
 ---
 

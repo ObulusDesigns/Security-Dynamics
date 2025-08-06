@@ -30,9 +30,9 @@ const pricingFAQs = [
 ];
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://securitydynamicsinc.com' },
-  { name: 'Guides', url: 'https://securitydynamicsinc.com/guides' },
-  { name: 'Commercial Security System Costs', url: 'https://securitydynamicsinc.com/guides/commercial-security-system-costs' }
+  { name: 'Home', url: 'https://securitydynamicsnj.com' },
+  { name: 'Guides', url: 'https://securitydynamicsnj.com/guides' },
+  { name: 'Commercial Security System Costs', url: 'https://securitydynamicsnj.com/guides/commercial-security-system-costs' }
 ];
 
 export const metadata: Metadata = {
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Commercial Security System Costs in NJ - 2025 Pricing Guide',
     description: 'Complete pricing guide for commercial security systems in New Jersey. Real costs, ROI analysis, and savings tips.',
-    url: 'https://securitydynamicsinc.com/guides/commercial-security-system-costs',
+    url: 'https://securitydynamicsnj.com/guides/commercial-security-system-costs',
     images: [{ url: '/images/commercial-security-pricing-guide.jpg' }],
   },
   alternates: {
-    canonical: 'https://securitydynamicsinc.com/guides/commercial-security-system-costs',
+    canonical: 'https://securitydynamicsnj.com/guides/commercial-security-system-costs',
   },
 };
 

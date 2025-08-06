@@ -39,10 +39,10 @@ const princetonFAQs = [
 ];
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://securitydynamicsinc.com' },
-  { name: 'Locations', url: 'https://securitydynamicsinc.com/locations' },
-  { name: 'New Jersey', url: 'https://securitydynamicsinc.com/service-areas/mercer-county-nj' },
-  { name: 'Princeton', url: 'https://securitydynamicsinc.com/locations/princeton-nj' }
+  { name: 'Home', url: 'https://securitydynamicsnj.com' },
+  { name: 'Locations', url: 'https://securitydynamicsnj.com/locations' },
+  { name: 'New Jersey', url: 'https://securitydynamicsnj.com/service-areas/mercer-county-nj' },
+  { name: 'Princeton', url: 'https://securitydynamicsnj.com/locations/princeton-nj' }
 ];
 
 export const metadata: Metadata = {
@@ -52,11 +52,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Princeton NJ Commercial Security Systems | Security Dynamics',
     description: 'Trusted security provider for Princeton businesses since 1984. Protecting law firms, medical offices, retail, and university area properties.',
-    url: 'https://securitydynamicsinc.com/locations/princeton-nj',
+    url: 'https://securitydynamicsnj.com/locations/princeton-nj',
     images: [{ url: '/images/princeton-security-systems.jpg' }],
   },
   alternates: {
-    canonical: 'https://securitydynamicsinc.com/locations/princeton-nj',
+    canonical: 'https://securitydynamicsnj.com/locations/princeton-nj',
   },
 };
 

@@ -3,16 +3,16 @@ import { Service, FAQPage, WithContext, LocalBusiness, Product, BreadcrumbList, 
 export const organizationSchema: WithContext<LocalBusiness> = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://securitydynamicsinc.com/#organization',
+  '@id': 'https://securitydynamicsnj.com/#organization',
   name: 'Security Dynamics Inc.',
   alternateName: 'SDI Security',
-  url: 'https://securitydynamicsinc.com',
-  logo: 'https://securitydynamicsinc.com/images/logo/security-dynamics-logo.png',
-  image: 'https://securitydynamicsinc.com/images/office.jpg',
+  url: 'https://securitydynamicsnj.com',
+  logo: 'https://securitydynamicsnj.com/images/logo/security-dynamics-logo.png',
+  image: 'https://securitydynamicsnj.com/images/office.jpg',
   description: 'Professional commercial security systems, fire alarms, and 24/7 monitoring services in Mercer County NJ and Bucks County PA. Over 40 years of protecting businesses.',
   telephone: '+1-609-882-8988',
   faxNumber: '+1-609-882-8959',
-  email: 'info@securitydynamicsinc.com',
+  email: 'info@securitydynamicsnj.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '6 David Brainerd Dr',
@@ -190,14 +190,14 @@ export function generateServiceSchema(service: {
     provider: {
       '@type': 'LocalBusiness',
       name: service.provider || 'Security Dynamics Inc.',
-      '@id': 'https://securitydynamicsinc.com/#organization'
+      '@id': 'https://securitydynamicsnj.com/#organization'
     },
     areaServed: service.areaServed?.map(area => ({
       '@type': 'Place',
       name: area
     })),
     serviceType: service.name,
-    termsOfService: 'https://securitydynamicsinc.com/terms',
+    termsOfService: 'https://securitydynamicsnj.com/terms',
     category: 'Commercial Security Services',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -254,7 +254,7 @@ export function generateProductSchema(product: {
       seller: {
         '@type': 'LocalBusiness' as const,
         name: 'Security Dynamics Inc.',
-        '@id': 'https://securitydynamicsinc.com/#organization'
+        '@id': 'https://securitydynamicsnj.com/#organization'
       }
     } : undefined
   };
@@ -285,12 +285,12 @@ export function generateLocalBusinessSchema(location: {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': `https://securitydynamicsinc.com/locations/${location.city.toLowerCase().replace(/\s+/g, '-')}-${location.state.toLowerCase()}/#location`,
+    '@id': `https://securitydynamicsnj.com/locations/${location.city.toLowerCase().replace(/\s+/g, '-')}-${location.state.toLowerCase()}/#location`,
     name: `Security Dynamics Inc. - ${location.name}`,
     description: location.description,
     parentOrganization: {
       '@type': 'Organization',
-      '@id': 'https://securitydynamicsinc.com/#organization'
+      '@id': 'https://securitydynamicsnj.com/#organization'
     },
     areaServed: {
       '@type': 'City',

@@ -130,9 +130,9 @@ const caseStudyData: CaseStudyData = {
 };
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://securitydynamicsinc.com' },
-  { name: 'Case Studies', url: 'https://securitydynamicsinc.com/case-studies' },
-  { name: 'Princeton Law Firm Security', url: 'https://securitydynamicsinc.com/case-studies/princeton-law-firm' }
+  { name: 'Home', url: 'https://securitydynamicsnj.com' },
+  { name: 'Case Studies', url: 'https://securitydynamicsnj.com/case-studies' },
+  { name: 'Princeton Law Firm Security', url: 'https://securitydynamicsnj.com/case-studies/princeton-law-firm' }
 ];
 
 export const metadata: Metadata = {
@@ -142,12 +142,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Case Study: Securing a Historic Princeton Law Firm',
     description: 'How Security Dynamics protected sensitive client data in a 1920s Nassau Street building.',
-    url: 'https://securitydynamicsinc.com/case-studies/princeton-law-firm',
+    url: 'https://securitydynamicsnj.com/case-studies/princeton-law-firm',
     images: [{ url: '/images/case-studies/princeton-law-firm-og.jpg' }],
     type: 'article',
   },
   alternates: {
-    canonical: 'https://securitydynamicsinc.com/case-studies/princeton-law-firm',
+    canonical: 'https://securitydynamicsnj.com/case-studies/princeton-law-firm',
   },
 };
 

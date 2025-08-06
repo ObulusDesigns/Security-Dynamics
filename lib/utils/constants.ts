@@ -39,7 +39,7 @@ export const COMPANY_INFO = {
 };
 
 export const SITE_CONFIG = {
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://securitydynamicsinc.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://securitydynamicsnj.com',
   defaultTitle: 'Security Dynamics Inc. - Advanced Security Systems NJ & PA',
   defaultDescription: 'Professional security systems installation and 24/7 monitoring in Mercer County NJ and Bucks County PA. Access control, video surveillance, intrusion detection, and more.',
   defaultKeywords: [

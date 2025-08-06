@@ -22,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://securitydynamicsinc.com/sitemap.xml',
+    sitemap: 'https://securitydynamicsnj.com/sitemap.xml',
   };
 }

@@ -40,10 +40,10 @@ const trentonFAQs = [
 ];
 
 const breadcrumbs = [
-  { name: 'Home', url: 'https://securitydynamicsinc.com' },
-  { name: 'Locations', url: 'https://securitydynamicsinc.com/locations' },
-  { name: 'New Jersey', url: 'https://securitydynamicsinc.com/service-areas/mercer-county-nj' },
-  { name: 'Trenton', url: 'https://securitydynamicsinc.com/locations/trenton-nj' }
+  { name: 'Home', url: 'https://securitydynamicsnj.com' },
+  { name: 'Locations', url: 'https://securitydynamicsnj.com/locations' },
+  { name: 'New Jersey', url: 'https://securitydynamicsnj.com/service-areas/mercer-county-nj' },
+  { name: 'Trenton', url: 'https://securitydynamicsnj.com/locations/trenton-nj' }
 ];
 
 export const metadata: Metadata = {
@@ -53,11 +53,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Trenton NJ Commercial Security Systems | Security Dynamics',
     description: 'Protecting Trenton businesses since 1984. Specializing in warehouse, industrial, and government building security. Local headquarters for rapid response.',
-    url: 'https://securitydynamicsinc.com/locations/trenton-nj',
+    url: 'https://securitydynamicsnj.com/locations/trenton-nj',
     images: [{ url: '/images/trenton-security-systems.jpg' }],
   },
   alternates: {
-    canonical: 'https://securitydynamicsinc.com/locations/trenton-nj',
+    canonical: 'https://securitydynamicsnj.com/locations/trenton-nj',
   },
 };
 

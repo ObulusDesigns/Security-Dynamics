@@ -3,7 +3,7 @@ import { allLocations } from '@/lib/data/locations';
 import { services } from '@/lib/data/services';
 import { industries } from '@/lib/data/industries';
 
-const baseUrl = 'https://securitydynamicsinc.com';
+const baseUrl = 'https://securitydynamicsnj.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages

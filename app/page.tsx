@@ -32,7 +32,7 @@ const organizationSchema = {
   url: SITE_CONFIG.url,
   logo: `${SITE_CONFIG.url}/logo-1.webp`,
   telephone: '+1-609-330-2287',
-  email: 'info@securitydynamicsinc.com',
+  email: 'info@securitydynamicsnj.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '520 Route 33',
