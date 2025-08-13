@@ -42,8 +42,18 @@ export async function POST(request: NextRequest) {
     // Format email content
     const emailContent = formatQuoteEmail(validatedData);
     
-    // Log for development (in production, send actual email)
-    console.log('Quote request submission:', emailContent);
+    // TODO: Integrate with email service (SendGrid, AWS SES, Resend, etc.)
+    // Example implementation:
+    // await sendEmail({
+    //   to: 'sales@securitydynamicsnj.com',
+    //   subject: emailContent.subject,
+    //   html: emailContent.html,
+    //   replyTo: validatedData.email,
+    // });
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Quote request submission:', emailContent);
+    }
     
     // In production, integrate with email service
     // await sendEmail({
@@ -71,7 +81,9 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
     
-    console.error('Quote form error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Quote form error:', error);
+    }
     return NextResponse.json({
       success: false,
       message: 'An error occurred. Please try again or call us for immediate assistance.',

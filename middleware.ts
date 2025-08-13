@@ -43,6 +43,17 @@ export function middleware(request: NextRequest) {
     }
   }
   
+  // In development, add permissive headers for React DevTools
+  if (process.env.NODE_ENV === 'development') {
+    const response = NextResponse.next();
+    
+    // Remove strict CSP in development
+    response.headers.delete('Content-Security-Policy');
+    response.headers.delete('X-Content-Security-Policy');
+    
+    return response;
+  }
+  
   return NextResponse.next();
 }
 

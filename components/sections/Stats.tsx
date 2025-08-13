@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useEffect, useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { 
   BuildingOfficeIcon,
   ClockIcon,
   ShieldCheckIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
+import { fadeInUp, statsItem, staggerContainer, viewportSettings } from '@/lib/animations/variants';
 
 const stats = [
   {
@@ -45,20 +47,24 @@ const stats = [
   }
 ];
 
-// Animated counter component
+// Animated counter component with reduced motion support
 function AnimatedCounter({ end, duration = 2000, suffix = '' }: { end: number; duration?: number; suffix?: string }) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useRef(
+    typeof window !== 'undefined' && 
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '-50px' }
     );
 
     if (ref.current) {
@@ -66,20 +72,29 @@ function AnimatedCounter({ end, duration = 2000, suffix = '' }: { end: number; d
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isVisible]);
 
   useEffect(() => {
     if (!isVisible) return;
+
+    // Skip animation if user prefers reduced motion
+    if (prefersReducedMotion.current) {
+      setCount(end);
+      return;
+    }
 
     let startTime: number;
     let animationFrame: number;
 
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
-      const progress = (timestamp - startTime) / duration;
-
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Easing function for smoother animation
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      
       if (progress < 1) {
-        setCount(Math.floor(end * progress));
+        setCount(Math.floor(end * easedProgress));
         animationFrame = requestAnimationFrame(animate);
       } else {
         setCount(end);
@@ -92,7 +107,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = '' }: { end: number; d
   }, [end, duration, isVisible]);
 
   return (
-    <div ref={ref} className="text-4xl font-bold text-white mb-2">
+    <div ref={ref} className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-white to-gray-300 bg-clip-text mb-3 will-change-auto tracking-wider uppercase">
       {count}{suffix}
     </div>
   );
@@ -108,33 +123,55 @@ export function Stats({
   subtitle = "Our numbers speak for themselves - protecting businesses across Mercer and Bucks Counties"
 }: StatsProps) {
   return (
-    <section className="section-padding bg-slate-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px'
-        }} />
+    <section className="py-32 lg:py-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Modern Animated Background */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute inset-0 gradient-mesh" />
       </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+      {/* Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Modern Section Header */}
+        <motion.div 
+          className="text-center max-w-4xl mx-auto mb-20"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 tracking-wider leading-[1.1] uppercase">
             {title}
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-normal tracking-wide">
             {subtitle}
           </p>
-        </div>
+        </motion.div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Modern Stats Grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
           {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              {/* Icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-600/20 backdrop-blur-sm border border-red-600/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-8 h-8 text-red-400" />
+            <motion.div 
+              key={index} 
+              variants={statsItem}
+              className="text-center group"
+            >
+              {/* Modern Glass Icon */}
+              <div className="relative inline-block mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-xl rounded-3xl flex items-center justify-center border border-white/10 shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                  <stat.icon className="w-10 h-10 text-red-400" />
+                </div>
+                <div className="absolute -inset-2 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
               </div>
               
               {/* Value */}
@@ -145,23 +182,21 @@ export function Stats({
                   duration={2000}
                 />
               ) : (
-                <div className="text-4xl font-bold text-white mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-white to-gray-300 bg-clip-text mb-3 tracking-wider uppercase">
                   {stat.value}
                 </div>
               )}
               
-              {/* Label */}
-              <h3 className="text-lg font-semibold text-white mb-1">
+              {/* Modern Label & Description */}
+              <h3 className="text-lg font-semibold text-white mb-2 tracking-wider uppercase">
                 {stat.label}
               </h3>
-              
-              {/* Description */}
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-400 font-normal tracking-wide">
                 {stat.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

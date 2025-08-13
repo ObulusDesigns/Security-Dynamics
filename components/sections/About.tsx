@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Shield, Award, Users, Clock } from 'lucide-react';
+import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem, viewportSettings } from '@/lib/animations/variants';
 
 const stats = [
   {
@@ -55,16 +56,16 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
           className="text-center mb-8 lg:mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-semibold text-slate-900 mb-4 tracking-wider uppercase">
             Your Trusted Security Partner Since 1985
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 lg:mb-0">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8 lg:mb-0 tracking-wide">
             Security Dynamics has been protecting businesses across New Jersey and Pennsylvania 
             for over four decades, combining cutting-edge technology with unmatched local expertise.
           </p>
@@ -72,20 +73,24 @@ export default function About() {
 
         {/* Stats Grid - Mobile Only */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
           className="grid grid-cols-2 gap-4 mb-12 lg:hidden"
         >
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white rounded-lg shadow-lg">
+            <motion.div 
+              key={index} 
+              variants={staggerItem}
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+            >
               <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-full mb-4 shadow-lg">
                 <stat.icon className="w-7 h-7 text-white" />
               </div>
-              <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
-              <div className="text-sm text-gray-600">{stat.label}</div>
-            </div>
+              <div className="text-2xl font-semibold text-slate-900 mb-2 tracking-wider">{stat.value}</div>
+              <div className="text-sm text-gray-600 tracking-wide">{stat.label}</div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -93,26 +98,26 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Column - Story */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            variants={slideInLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
           >
-            <h3 className="text-3xl font-semibold text-slate-900 mb-6">
+            <h3 className="text-2xl font-semibold text-slate-900 mb-6 tracking-wider uppercase">
               Four Decades of Excellence
             </h3>
             <div className="space-y-4">
-              <p className="leading-relaxed text-gray-700">
+              <p className="leading-relaxed text-gray-700 tracking-wide">
                 Founded in 1985, Security Dynamics began with a simple mission: provide businesses 
                 with security solutions that actually work. What started as a small team serving 
                 local businesses has grown into the region's most trusted security provider.
               </p>
-              <p className="leading-relaxed text-gray-700">
+              <p className="leading-relaxed text-gray-700 tracking-wide">
                 Today, we protect over 500 businesses across Mercer and Bucks Counties, from small 
                 retail shops to large healthcare facilities. Our success is built on understanding 
                 that every business has unique security challenges that require tailored solutions.
               </p>
-              <p className="leading-relaxed text-gray-700">
+              <p className="leading-relaxed text-gray-700 tracking-wide">
                 As technology has evolved, so have we. From basic alarm systems to AI-powered 
                 surveillance and integrated access control, we've stayed at the forefront of security 
                 innovation while maintaining the personal touch that sets us apart.
@@ -122,20 +127,24 @@ export default function About() {
 
           {/* Right Column - Stats */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            variants={slideInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
             className="hidden lg:grid grid-cols-2 gap-6"
           >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+              <motion.div 
+                key={index} 
+                variants={staggerItem}
+                className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-transform duration-300"
+              >
                 <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-full mb-4 shadow-lg">
                   <stat.icon className="w-7 h-7 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </div>
+                <div className="text-2xl font-semibold text-slate-900 mb-2 tracking-wider">{stat.value}</div>
+                <div className="text-sm text-gray-600 tracking-wide">{stat.label}</div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -143,36 +152,39 @@ export default function About() {
 
         {/* Values Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
         >
-          <h3 className="text-3xl font-semibold text-slate-900 text-center mb-12">
+          <h3 className="text-2xl font-semibold text-slate-900 text-center mb-12 tracking-wider uppercase">
             What Sets Us Apart
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <motion.div 
+            className="grid md:grid-cols-2 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSettings}
+          >
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                variants={staggerItem}
+                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl font-bold">{value.title.charAt(0)}</span>
+                    <span className="text-white text-lg font-semibold">{value.title.charAt(0)}</span>
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-slate-900 mb-2">{value.title}</h4>
-                    <p className="text-gray-700">{value.description}</p>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2 tracking-wider uppercase">{value.title}</h4>
+                    <p className="text-gray-700 text-sm tracking-wide">{value.description}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
 
       </div>

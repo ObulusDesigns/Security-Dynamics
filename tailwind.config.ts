@@ -113,12 +113,33 @@ export default {
       },
     },
     extend: {
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '120': '30rem',
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+      },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
+        '9xl': '7rem',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
       fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       backgroundImage: {
         'circle-pattern': `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
         'hero-gradient': 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-mesh': 'var(--gradient-mesh)',
       },
       backgroundSize: {
         'circle-pattern': '20px 20px',
@@ -188,9 +209,6 @@ export default {
             textShadow: '0 0 30px rgba(220, 38, 38, 0.8)',
           },
         },
-      },
-      backdropBlur: {
-        xs: '2px',
       },
     },
   },

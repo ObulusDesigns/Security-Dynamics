@@ -31,8 +31,17 @@ export async function POST(request: NextRequest) {
     // Format notification email
     const emailContent = formatNewsletterNotification(validatedData);
     
-    // Log for development
-    console.log('Newsletter signup:', emailContent);
+    // TODO: Integrate with email marketing platform
+    // 1. Add to email list (Mailchimp, SendGrid Marketing, etc.)
+    // 2. Send welcome email to subscriber
+    // 3. Send notification to admin
+    // Example:
+    // await addToMailingList(validatedData.email, validatedData.firstName, validatedData.interests);
+    // await sendWelcomeEmail(validatedData.email);
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Newsletter signup:', emailContent);
+    }
     
     // In production:
     // 1. Add to email marketing platform (Mailchimp, SendGrid, etc.)
@@ -56,7 +65,9 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
     
-    console.error('Newsletter signup error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Newsletter signup error:', error);
+    }
     return NextResponse.json({
       success: false,
       message: 'An error occurred. Please try again later.',

@@ -10,6 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { COMPANY_INFO } from '@/lib/utils/constants';
 import { cn } from '@/lib/utils/helpers';
+import { heroContent, heroFloatingElement, staggerContainer, staggerItem } from '@/lib/animations/variants';
 
 interface HeroProps {
   title: string;
@@ -39,132 +40,140 @@ export function Hero({
   className
 }: HeroProps) {
   return (
-    <section className={cn('relative min-h-[90vh] bg-slate-900 flex items-center overflow-hidden', className)}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
+    <section className={cn('relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center overflow-hidden', className)}>
+      {/* Modern Gradient Mesh Background */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <div className="absolute inset-0 gradient-mesh" />
+      </div>
+      
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          backgroundSize: '60px 60px'
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 40h80M40 0v80' /%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '80px 80px'
         }} />
       </div>
 
-      {/* Floating Elements */}
+      {/* Modern Floating Glass Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-red-500/10 rounded-full blur-2xl"
-          animate={{
-            y: [0, -20, 0],
-            x: [0, 10, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl will-change-transform"
+          variants={heroFloatingElement}
+          initial="initial"
+          animate="animate"
+          style={{ transform: 'translateZ(0)' }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"
-          animate={{
-            y: [0, 20, 0],
-            x: [0, -10, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          className="absolute bottom-20 right-10 w-60 h-60 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl will-change-transform"
+          variants={heroFloatingElement}
+          initial="initial"
+          animate="animate"
+          style={{ transform: 'translateZ(0)' }}
         />
         <motion.div
-          className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-full blur-2xl"
-          animate={{
-            y: [0, -30, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-full blur-3xl will-change-transform"
+          variants={heroFloatingElement}
+          initial="initial"
+          animate="animate"
+          style={{ transform: 'translateZ(0)' }}
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto container-padding py-20 lg:py-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-32 lg:py-0">
         <div className="flex flex-col items-center text-center">
           {/* Main content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            variants={heroContent}
+            initial="hidden"
+            animate="visible"
             className="max-w-4xl mx-auto space-y-8"
           >
-            {/* Badges */}
-            <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/20">
-                <Shield className="h-4 w-4 mr-2 text-red-400" />
+            {/* Modern Glass Badges */}
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <motion.div 
+                className="inline-flex items-center px-6 py-3 bg-white/5 backdrop-blur-xl rounded-2xl text-sm font-medium text-white border border-white/10 shadow-2xl tracking-wider uppercase"
+                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
+              >
+                <Shield className="h-5 w-5 mr-3 text-red-400" />
                 Family Owned & Operated Since 1985
-              </div>
-              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-white/20">
-                <MapPin className="h-4 w-4 mr-2" />
+              </motion.div>
+              <motion.div 
+                className="inline-flex items-center px-6 py-3 bg-white/5 backdrop-blur-xl rounded-2xl text-sm font-medium text-white border border-white/10 shadow-2xl tracking-wider"
+                whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
+              >
+                <MapPin className="h-5 w-5 mr-3 text-blue-400" />
                 Serving Mercer County NJ & Bucks County PA
-              </div>
+              </motion.div>
             </div>
             
-            {/* Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
+            {/* Modern Bold Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-white tracking-wider uppercase">
               {title.includes('&') ? (
                 <>
                   {title.split('&')[0]}
-                  <span className="text-red-500 block mt-2">{title.split('&')[1]}</span>
+                  <span className="bg-gradient-to-r from-red-400 via-red-500 to-orange-500 bg-clip-text text-transparent block mt-4">
+                    {title.split('&')[1]}
+                  </span>
                 </>
               ) : (
                 title
               )}
             </h1>
             
-            {/* Description */}
+            {/* Modern Description */}
             {description && (
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-normal tracking-wide opacity-90">
                 {description}
               </p>
             )}
             
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            {/* Modern CTAs with Enhanced Styling */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
               {primaryCta && (
-                <Link 
-                  href={primaryCta.href}
-                  className="btn-primary text-lg px-8 py-4"
-                >
-                  {primaryCta.text}
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link 
+                    href={primaryCta.href}
+                    className="group relative inline-flex items-center justify-center px-10 py-5 text-base font-semibold text-white bg-gradient-to-r from-red-500 to-red-600 rounded-2xl shadow-2xl shadow-red-500/25 hover:shadow-red-500/40 transition-all duration-300 overflow-hidden tracking-wider uppercase"
+                  >
+                    <span className="relative z-10">{primaryCta.text}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </Link>
+                </motion.div>
               )}
               
               {secondaryCta && (
-                <a 
-                  href={`tel:${COMPANY_INFO.phone.replace(/\D/g, '')}`}
-                  className="btn-secondary text-lg px-8 py-4"
-                >
-                  {COMPANY_INFO.phone}
-                </a>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <a 
+                    href={`tel:${COMPANY_INFO.phone.replace(/\D/g, '')}`}
+                    className="group relative inline-flex items-center justify-center px-10 py-5 text-base font-semibold text-white bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl hover:bg-white/20 transition-all duration-300 tracking-wider"
+                  >
+                    <span className="mr-2">📞</span>
+                    {COMPANY_INFO.phone}
+                  </a>
+                </motion.div>
               )}
             </div>
             
             {/* Features */}
             {features && features.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-6 pt-8">
-                {features.map((feature, index) => (
+              <motion.div 
+                className="flex flex-wrap justify-center gap-6 pt-8"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+              >
+                {features.map((feature) => (
                   <motion.div
                     key={feature}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                    className="flex items-center space-x-2 text-white/90"
+                    variants={staggerItem}
+                    className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10"
+                    whileHover={{ backgroundColor: 'rgba(255,255,255,0.1)', x: 5 }}
                   >
                     <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
-                    <span className="text-sm font-medium">{feature}</span>
+                    <span className="text-sm font-medium text-white/90 tracking-wide">{feature}</span>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             )}
           </motion.div>
 

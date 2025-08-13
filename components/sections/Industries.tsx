@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   BuildingOffice2Icon,
   HeartIcon,
@@ -7,6 +10,7 @@ import {
   HomeModernIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import { fadeInUp, staggerContainer, serviceCard, viewportSettings } from '@/lib/animations/variants';
 
 const industries = [
   {
@@ -96,37 +100,54 @@ export function Industries({
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6 tracking-wider uppercase">
             {title}
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-lg text-gray-300 leading-relaxed tracking-wide">
             {subtitle}
           </p>
-        </div>
+        </motion.div>
 
         {/* Industries Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
           {industries.map((industry) => (
-            <Link
+            <motion.div
               key={industry.name}
-              href={industry.href}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.02]"
+              variants={serviceCard}
+              whileHover="hover"
+              className="will-change-transform"
             >
-              {/* Background gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-50/0 to-red-50/0 group-hover:from-red-50 group-hover:to-transparent transition-all duration-300" />
+              <Link
+                href={industry.href}
+                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden block h-full"
+              >
+                {/* Background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-50/0 to-red-50/0 group-hover:from-red-50 group-hover:to-transparent transition-colors duration-300" />
               
               <div className="relative z-10">
                 {/* Header */}
                 <div className="flex items-start mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:from-red-600 group-hover:to-red-700 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mr-4 shadow-lg group-hover:from-red-600 group-hover:to-red-700 transition-colors duration-300">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2 tracking-wider uppercase">
                       {industry.name}
                     </h3>
-                    <div className="inline-flex items-center bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="inline-flex items-center bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium tracking-wide">
                       <span className="text-red-800">{industry.stats.value}</span>
                       <span className="ml-2">{industry.stats.label}</span>
                     </div>
@@ -156,16 +177,23 @@ export function Industries({
                   <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
+        <motion.div 
+          className="mt-16 text-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
           <p className="text-xl text-gray-300">
             Don't see your industry? We provide custom security solutions for any business type.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

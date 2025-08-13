@@ -2,8 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 import { darkSectionClasses, darkSectionPatternStyle, sectionPadding } from '@/lib/utils/sectionStyles';
+import { fadeInUp, staggerContainer, testimonialCard, viewportSettings } from '@/lib/animations/variants';
 
 const testimonials = [
   {
@@ -53,11 +55,17 @@ export function Testimonials({
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+        <motion.div 
+          className="text-center max-w-3xl mx-auto mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6 tracking-wider uppercase">
             {title}
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-lg text-gray-300 leading-relaxed tracking-wide">
             {subtitle}
           </p>
           
@@ -76,17 +84,25 @@ export function Testimonials({
                   <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
                 ))}
               </div>
-              <span className="ml-2 text-white font-semibold">5/5 Rating</span>
+              <span className="ml-2 text-white font-medium tracking-wider">5/5 Rating</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
           {testimonials.map((testimonial) => (
-            <div 
-              key={testimonial.id} 
-              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            <motion.div 
+              key={testimonial.id}
+              variants={testimonialCard}
+              whileHover={{ y: -5 }}
+              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300"
             >
               {/* Google Review Header */}
               <div className="flex items-start justify-between mb-6">
@@ -99,7 +115,7 @@ export function Testimonials({
                     {testimonial.initials}
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 text-lg">{testimonial.author}</div>
+                    <div className="font-semibold text-gray-900 text-base tracking-wider uppercase">{testimonial.author}</div>
                     <div className="flex items-center space-x-2">
                       <div className="flex">
                         {[...Array(testimonial.rating)].map((_, i) => (
@@ -121,20 +137,26 @@ export function Testimonials({
               </div>
               
               {/* Content */}
-              <p className="text-gray-700 leading-relaxed text-base">
+              <p className="text-gray-700 leading-relaxed text-sm tracking-wide">
                 {testimonial.content}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Leave a Review Button */}
-        <div className="mt-16 text-center">
+        <motion.div 
+          className="mt-16 text-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSettings}
+        >
           <a
             href="https://www.google.com/search?q=Security+Dynamics+Inc+Millstone+NJ&rlz=1C1CHBF_enUS&oq=Security+Dynamics+Inc+Millstone+NJ#lrd=0x89c3e7a8f9f9f9f9:0x1234567890abcdef,3"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-red-600 border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-red-50 hover:border-red-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-flex items-center gap-3 bg-white text-red-600 border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-red-50 hover:border-red-50 transition-colors duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 tracking-wider uppercase"
           >
             <Image
               src="/icons/google.webp"
@@ -145,7 +167,7 @@ export function Testimonials({
             />
             Leave a Review
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

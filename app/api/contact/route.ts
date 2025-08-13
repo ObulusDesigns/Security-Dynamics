@@ -33,7 +33,9 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
     const data = await response.json();
     return data.success === true;
   } catch (error) {
-    console.error('reCAPTCHA verification error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('reCAPTCHA verification error:', error);
+    }
     return false;
   }
 }
@@ -56,16 +58,28 @@ export async function POST(request: NextRequest) {
       }
     } else if (!process.env.RECAPTCHA_SECRET_KEY) {
       // Log warning in development if reCAPTCHA is not configured
-      console.warn('Warning: RECAPTCHA_SECRET_KEY not configured. Form submissions are not protected by reCAPTCHA.');
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Warning: RECAPTCHA_SECRET_KEY not configured. Form submissions are not protected by reCAPTCHA.');
+      }
     }
     
     // Format email content (without recaptchaToken)
     const { recaptchaToken, ...formData } = validatedData;
     const emailContent = formatEmailContent(formData);
     
-    // In a production environment, you would send this to an email service
-    // For now, we'll simulate the email sending
-    console.log('Contact form submission:', emailContent);
+    // TODO: Integrate with email service (SendGrid, AWS SES, Resend, etc.)
+    // Example implementation:
+    // await sendEmail({
+    //   to: 'info@securitydynamicsnj.com',
+    //   subject: emailContent.subject,
+    //   html: emailContent.html,
+    //   text: emailContent.text,
+    //   replyTo: validatedData.email,
+    // });
+    
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Contact form submission:', emailContent);
+    }
     
     // In production, use a service like SendGrid, AWS SES, or Resend
     // Example with a hypothetical email service:
@@ -93,7 +107,9 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
     
-    console.error('Contact form error:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Contact form error:', error);
+    }
     return NextResponse.json({
       success: false,
       message: 'An error occurred. Please try again or call us directly.',

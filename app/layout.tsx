@@ -8,6 +8,7 @@ import { RecaptchaBadge } from '@/components/ui/RecaptchaBadge';
 import { SITE_CONFIG, TRACKING } from '@/lib/utils/constants';
 import StructuredData from '@/components/seo/StructuredData';
 import { organizationSchema } from '@/lib/utils/structured-data';
+import { MotionProvider } from '@/lib/animations/MotionProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -77,11 +78,13 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
       </head>
       <body className={inter.className}>
-        <StructuredData data={organizationSchema} />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <RecaptchaBadge />
+        <MotionProvider>
+          <StructuredData data={organizationSchema} />
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <RecaptchaBadge />
+        </MotionProvider>
         
         {/* Google Analytics */}
         {TRACKING.googleAnalytics && (

@@ -9,8 +9,6 @@ interface WebVitalsMetric {
 
 export const reportWebVitals = (metric: WebVitalsMetric) => {
   if (metric.label === 'web-vital') {
-    console.log(metric);
-    
     // Send to analytics if available
     if (typeof window !== 'undefined') {
       const windowWithGtag = window as Window & { gtag?: (...args: unknown[]) => void };
