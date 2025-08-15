@@ -221,9 +221,14 @@ export function Footer() {
             </div>
 
             <div className="mt-6 space-y-2">
-              <Link href="/contact" className="btn-primary text-sm w-full text-center block">
+              <a 
+                href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-sm w-full text-center block"
+              >
                 Security Assessment
-              </Link>
+              </a>
               <div className="text-center">
                 <Link href="/pay-monitoring-bill" className="text-xs text-gray-400 hover:text-red-400 transition-colors">
                   Pay Monitoring Bill

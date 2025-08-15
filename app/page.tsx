@@ -133,7 +133,7 @@ export default function HomePage() {
         description="Experience next-generation security technology with local expertise. We're not just installing systems—we're protecting what matters most with cutting-edge solutions and 24/7 monitoring."
         primaryCta={{
           text: "Get Security Assessment",
-          href: "/contact"
+          href: "https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
         }}
         secondaryCta={{
           text: "Call Now",

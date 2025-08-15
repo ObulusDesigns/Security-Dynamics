@@ -54,8 +54,7 @@ const navigation = {
   ],
   learningCenter: [
     { name: 'About Us', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Blog', href: '/blog' }
   ]
 };
 
@@ -235,12 +234,14 @@ export function Navbar() {
                 <div className="text-sm text-gray-600">24/7 Emergency</div>
                 <div className="text-lg font-bold text-gray-800">{COMPANY_INFO.phone}</div>
               </div>
-              <Link 
-                href="/contact" 
+              <a 
+                href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
               >
                 Get Assessment
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -373,13 +374,15 @@ export function Navbar() {
                 
                 {/* Fixed Bottom CTA */}
                 <div className="absolute bottom-0 left-0 right-0 border-t border-gray-200 bg-white p-4">
-                  <Link
-                    href="/contact"
+                  <a
+                    href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full rounded-lg bg-red-600 px-6 py-3 text-center font-semibold text-white shadow-lg hover:bg-red-700 transition-all duration-200 transform hover:scale-[1.02]"
                     onClick={() => setIsOpen(false)}
                   >
                     Request a Quote
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             </motion.div>
@@ -388,12 +391,14 @@ export function Navbar() {
       </nav>
       
       {/* Fixed Request a Quote Button - Mobile Only */}
-      <Link
-        href="/contact"
+      <a
+        href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
+        target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-red-600 hover:bg-red-700 text-white py-4 text-center font-semibold text-lg transition-colors"
       >
         Request A Quote
-      </Link>
+      </a>
     </>
   );
 }

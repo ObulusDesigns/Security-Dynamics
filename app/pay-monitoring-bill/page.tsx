@@ -126,7 +126,7 @@ export default function PayMonitoringBillPage() {
                   Call (609) 330-2287
                 </a>
                 <Link
-                  href="/contact"
+                  href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center text-red-600 font-semibold hover:text-red-700"
                 >
                   Contact Support

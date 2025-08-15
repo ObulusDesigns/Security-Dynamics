@@ -109,7 +109,7 @@ export default function SecuritySystemUpgradeSignsPage() {
         
         primaryCta={{
           text: "Get Security Assessment",
-          href: "/contact"
+          href: "https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
         }}
       />
 
@@ -622,7 +622,7 @@ export default function SecuritySystemUpgradeSignsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-accent hover:bg-accent-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
                 >
                   Schedule Security Assessment
@@ -725,7 +725,7 @@ export default function SecuritySystemUpgradeSignsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Get Security Assessment

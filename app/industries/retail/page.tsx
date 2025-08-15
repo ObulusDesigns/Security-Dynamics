@@ -135,7 +135,7 @@ export default function RetailSecurityPage() {
         
         primaryCta={{
           text: "Get Retail Security Assessment",
-          href: "/contact"
+          href: "https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
         }}
       />
 

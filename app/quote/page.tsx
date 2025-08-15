@@ -182,7 +182,7 @@ export default function QuotePage() {
               Call Now: {COMPANY_INFO.phone}
             </a>
             <a
-              href="/contact"
+              href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-600 hover:text-white transition-colors"
             >
               Visit Our Office

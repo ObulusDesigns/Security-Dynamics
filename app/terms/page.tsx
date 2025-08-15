@@ -432,7 +432,7 @@ export default function TermsOfServicePage() {
 
           <p className="text-gray-400 text-sm mt-8 max-w-2xl mx-auto">
             For general inquiries or service requests, please visit our{' '}
-            <Link href="/contact" className="text-red-400 hover:text-red-300">
+            <Link href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300">
               Contact Page
             </Link>
           </p>

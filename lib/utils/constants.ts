@@ -61,7 +61,7 @@ export const TRACKING = {
 };
 
 export const FORMS = {
-  contactEndpoint: '/api/contact',
+  contactEndpoint: 'https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7',
   quoteEndpoint: '/api/quote',
   newsletterEndpoint: '/api/newsletter',
   recaptchaSiteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''

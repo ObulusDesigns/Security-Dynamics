@@ -282,7 +282,7 @@ export default function IndustriesPage() {
         description="Expert security systems tailored to meet the unique challenges and compliance requirements of your industry"
         primaryCta={{
           text: "Get Industry-Specific Consultation",
-          href: "/contact"
+          href: "https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
         }}
       />
 
@@ -462,7 +462,7 @@ export default function IndustriesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105"
             >
               Get Custom Industry Solution

@@ -281,7 +281,7 @@ export default function LocationsPage() {
               Call {COMPANY_INFO.phone}
             </a>
             <Link
-              href="/contact"
+              href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center bg-gray-700 hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
             >
               Request Coverage Area

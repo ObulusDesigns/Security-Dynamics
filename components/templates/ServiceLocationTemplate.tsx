@@ -329,10 +329,15 @@ export const ServiceLocationTemplate: React.FC<ServiceLocationTemplateProps> = (
                 <PhoneIcon className="mr-2 h-5 w-5" />
                 Call {COMPANY_INFO.phone}
               </Button>
-              <Button size="lg" variant="outline" className="text-gray-900 border-gray-300 hover:bg-gray-100" href="/contact">
+              <a
+                href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-gray-900 border-2 border-gray-300 rounded-lg hover:bg-gray-100 transition-colors"
+              >
                 Request Online Quote
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
-              </Button>
+              </a>
             </div>
           </div>
         </div>

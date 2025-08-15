@@ -138,7 +138,7 @@ export default function AboutPage() {
         description="Family-owned and operated, we've been protecting businesses across New Jersey and Pennsylvania for over 35 years with cutting-edge technology and personalized service."
         primaryCta={{
           text: "Get Security Assessment",
-          href: "/contact"
+          href: "https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
         }}
       />
 
@@ -566,7 +566,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Get Security Assessment

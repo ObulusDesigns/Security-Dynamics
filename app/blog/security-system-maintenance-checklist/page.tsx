@@ -534,7 +534,7 @@ export default function SecurityMaintenanceChecklistPage() {
                   <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
-                  href="/contact"
+                  href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-primary border-2 border-primary px-6 py-3 rounded-lg font-semibold transition-all duration-200"
                 >
                   Schedule Maintenance Service
@@ -624,7 +624,7 @@ export default function SecurityMaintenanceChecklistPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-primary hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200"
             >
               Schedule Maintenance Service

@@ -57,7 +57,7 @@ export default function BrandPageTemplate({ brand }: BrandPageProps) {
         showEmergencyBadge={false}
         primaryCta={{
           text: "Get Professional Consultation",
-          href: "/contact"
+          href: "https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7"
         }}
       />
 
@@ -228,7 +228,7 @@ export default function BrandPageTemplate({ brand }: BrandPageProps) {
               </ul>
 
               <Link 
-                href="/contact"
+                href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
               >
                 Get Residential Quote
@@ -257,7 +257,7 @@ export default function BrandPageTemplate({ brand }: BrandPageProps) {
               </ul>
 
               <Link 
-                href="/contact"
+                href="https://ocyrus.app.n8n.cloud/form/a96519af-6dc7-438a-a754-3d3eb830bdf7" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
               >
                 Get Commercial Quote
