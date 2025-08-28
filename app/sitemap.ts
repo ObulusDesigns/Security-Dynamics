@@ -159,6 +159,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog pages
   const blogPages = [
     {
+      url: `${baseUrl}/blog/security-vulnerabilities-nj-businesses-2025`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/blog/cannabis-business-security-requirements-nj-pa`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,

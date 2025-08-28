@@ -459,31 +459,31 @@ export default function CommercialSecurityCostGuide() {
                     </tr>
                     <tr className="border-b bg-gray-50">
                       <td className="p-4 font-semibold">Professional Install</td>
-                      <td className="p-4 text-center">✅ Yes</td>
-                      <td className="p-4 text-center">✅ Yes</td>
+                      <td className="p-4 text-center"> Yes</td>
+                      <td className="p-4 text-center"> Yes</td>
                       <td className="p-4 text-center">❌ No</td>
                     </tr>
                     <tr className="border-b bg-white">
                       <td className="p-4 font-semibold">Professional Monitoring</td>
-                      <td className="p-4 text-center">✅ Available</td>
-                      <td className="p-4 text-center">✅ Included</td>
+                      <td className="p-4 text-center"> Available</td>
+                      <td className="p-4 text-center"> Included</td>
                       <td className="p-4 text-center">⚠️ Limited</td>
                     </tr>
                     <tr className="border-b bg-gray-50">
                       <td className="p-4 font-semibold">Maintenance Included</td>
                       <td className="p-4 text-center">⚠️ Optional</td>
-                      <td className="p-4 text-center">✅ Yes</td>
+                      <td className="p-4 text-center"> Yes</td>
                       <td className="p-4 text-center">❌ No</td>
                     </tr>
                     <tr className="border-b bg-white">
                       <td className="p-4 font-semibold">System Ownership</td>
-                      <td className="p-4 text-center">✅ You own it</td>
+                      <td className="p-4 text-center"> You own it</td>
                       <td className="p-4 text-center">❌ No</td>
-                      <td className="p-4 text-center">✅ You own it</td>
+                      <td className="p-4 text-center"> You own it</td>
                     </tr>
                     <tr className="border-b bg-gray-50">
                       <td className="p-4 font-semibold">Tax Benefits</td>
-                      <td className="p-4 text-center">✅ Section 179</td>
+                      <td className="p-4 text-center"> Section 179</td>
                       <td className="p-4 text-center">⚠️ Operating expense</td>
                       <td className="p-4 text-center">⚠️ Limited</td>
                     </tr>

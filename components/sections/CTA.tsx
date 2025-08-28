@@ -91,7 +91,6 @@ export function CTA({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="mr-2">📞</span>
               Call Now: {COMPANY_INFO.phone}
             </motion.a>
             

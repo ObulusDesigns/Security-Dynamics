@@ -10,7 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { COMPANY_INFO } from '@/lib/utils/constants';
 import { cn } from '@/lib/utils/helpers';
-import { heroContent, heroFloatingElement, staggerContainer, staggerItem } from '@/lib/animations/variants';
+import { heroContent, staggerContainer, staggerItem } from '@/lib/animations/variants';
 
 interface HeroProps {
   title: string;
@@ -54,30 +54,8 @@ export function Hero({
         }} />
       </div>
 
-      {/* Modern Floating Glass Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl will-change-transform"
-          variants={heroFloatingElement}
-          initial="initial"
-          animate="animate"
-          style={{ transform: 'translateZ(0)' }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-60 h-60 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl will-change-transform"
-          variants={heroFloatingElement}
-          initial="initial"
-          animate="animate"
-          style={{ transform: 'translateZ(0)' }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-full blur-3xl will-change-transform"
-          variants={heroFloatingElement}
-          initial="initial"
-          animate="animate"
-          style={{ transform: 'translateZ(0)' }}
-        />
-      </div>
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-32 lg:py-0">
         <div className="flex flex-col items-center text-center">
@@ -147,7 +125,6 @@ export function Hero({
                     href={`tel:${COMPANY_INFO.phone.replace(/\D/g, '')}`}
                     className="group relative inline-flex items-center justify-center px-10 py-5 text-base font-semibold text-white bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl hover:bg-white/20 transition-all duration-300 tracking-wider"
                   >
-                    <span className="mr-2">📞</span>
                     {COMPANY_INFO.phone}
                   </a>
                 </motion.div>

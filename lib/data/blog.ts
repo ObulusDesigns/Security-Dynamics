@@ -12,9 +12,47 @@ export interface BlogPost {
   featuredImage: string;
   readTime: string;
   seoKeywords: string[];
+  featured?: boolean;
 }
 
+// Security industry specific categories
+export const categories = [
+  'All',
+  'Industry Trends',
+  'Tips & Advice',
+  'Compliance',
+  'Industry Solutions',
+  'Technology',
+  'Case Studies',
+  'Best Practices'
+];
+
+
 export const blogPosts: BlogPost[] = [
+  {
+    id: 'security-vulnerabilities-2025',
+    slug: 'security-vulnerabilities-nj-businesses-2025',
+    title: '7 Critical Security Vulnerabilities Every New Jersey Business Must Address in 2025',
+    excerpt: 'Protect your New Jersey business from critical security threats. Expert solutions for access control, surveillance, fire protection & 24/7 monitoring.',
+    category: 'Best Practices',
+    tags: ['Security Vulnerabilities', 'Business Security', 'Access Control', 'Surveillance', 'Fire Protection'],
+    author: 'Security Dynamics Team',
+    publishedDate: '2025-01-15',
+    lastUpdated: '2025-01-15',
+    featuredImage: '/images/blog/security-vulnerabilities.jpg',
+    readTime: '15 min',
+    featured: true,
+    seoKeywords: [
+      'security vulnerabilities business',
+      'commercial security systems NJ',
+      'business security New Jersey',
+      'access control systems',
+      'surveillance cameras NJ',
+      'fire protection systems',
+      '24/7 monitoring NJ',
+      'Security Dynamics Hamilton Township'
+    ]
+  },
   {
     id: 'security-trends-2024',
     slug: 'security-trends-2024-ai-smart-technology',
@@ -27,6 +65,7 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2024-01-20',
     featuredImage: '/images/blog/security-trends-2024.jpg',
     readTime: '8 min',
+    featured: false,
     seoKeywords: [
       'security trends 2024',
       'AI security systems',
@@ -47,6 +86,7 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2024-01-18',
     featuredImage: '/images/blog/prevent-false-alarms.jpg',
     readTime: '6 min',
+    featured: false,
     seoKeywords: [
       'prevent false alarms',
       'reduce false alarm fines',
@@ -67,6 +107,7 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2024-01-15',
     featuredImage: '/images/blog/cannabis-security.jpg',
     readTime: '10 min',
+    featured: false,
     seoKeywords: [
       'cannabis security requirements',
       'NJ cannabis security',
@@ -113,4 +154,32 @@ export const getRecentBlogPosts = (limit: number = 3): BlogPost[] => {
   return blogPosts
     .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
     .slice(0, limit);
+};
+
+// Get featured posts
+export const getFeaturedPosts = () => blogPosts.filter(post => post.featured);
+
+// Get regular posts  
+export const getRegularPosts = () => blogPosts.filter(post => !post.featured);
+
+// Check if post is new (less than 30 days old)
+export const isNewPost = (date: string) => {
+  const postDate = new Date(date);
+  const today = new Date();
+  const diffTime = Math.abs(today.getTime() - postDate.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays <= 30;
+};
+
+// Get posts by category
+export const getPostsByCategory = (category: string) => {
+  if (category === 'All') return blogPosts;
+  return blogPosts.filter(post => post.category === category);
+};
+
+// Get latest posts
+export const getLatestPosts = (count: number = 3) => {
+  return [...blogPosts]
+    .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
+    .slice(0, count);
 };

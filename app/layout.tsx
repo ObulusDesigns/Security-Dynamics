@@ -13,6 +13,7 @@ import { MotionProvider } from '@/lib/animations/MotionProvider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: SITE_CONFIG.defaultTitle,
   description: SITE_CONFIG.defaultDescription,
   keywords: SITE_CONFIG.defaultKeywords,

@@ -4,4 +4,5 @@ export { Services } from './Services';
 export { Stats } from './Stats';
 export { Testimonials } from './Testimonials';
 export { Industries } from './Industries';
+export { BlogSection } from './BlogSection';
 export { CTA } from './CTA';

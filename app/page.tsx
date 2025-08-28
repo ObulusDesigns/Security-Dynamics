@@ -1,7 +1,16 @@
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Script from 'next/script';
 import { Hero, About, Services, Stats, Testimonials, Industries, CTA } from '@/components/sections';
 import { SITE_CONFIG } from '@/lib/utils/constants';
+
+const BlogSection = dynamic(
+  () => import('@/components/sections').then(mod => ({ default: mod.BlogSection })),
+  { 
+    loading: () => <div className="py-16 sm:py-20 bg-gray-50"><div className="container mx-auto px-4 text-center">Loading blog posts...</div></div>,
+    ssr: true 
+  }
+);
 
 export const metadata: Metadata = {
   title: 'Security Dynamics Inc. | Commercial Security Systems NJ & PA | 24/7 Monitoring',
@@ -171,6 +180,9 @@ export default function HomePage() {
         title="Trusted by Leading Businesses"
         subtitle="See what our clients say about partnering with Security Dynamics"
       />
+
+      {/* Blog Section - Gray Background */}
+      <BlogSection />
 
       {/* CTA Section - White Background (Last section before footer) */}
       <CTA 
